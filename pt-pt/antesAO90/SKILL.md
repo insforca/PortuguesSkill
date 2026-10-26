@@ -1,6 +1,7 @@
 ---
 name: escrita-pt-pt
-description: Norma de escrita em português europeu (PT-PT) culto, com a ortografia ANTERIOR ao Acordo Ortográfico de 1990 (acção, óptimo, actual, director, Janeiro, pára, fim-de-semana), e sem marcas de texto gerado por IA. Usar SEMPRE que se escreva, reescreva, traduza ou reveja qualquer texto em português — ensaios, trabalhos académicos, teses, recensões, contos, novelas, romances, livros, cartas, e-mails formais e mensagens informais. Usar também por cima de skills calibradas para PT-BR (humanizar, paralelismo-negativo, better-portuguese, pesquisador-br): o léxico, a sintaxe e a ortografia desta skill prevalecem. Gatilhos — escrever em português, ensaio, trabalho académico, romance, novela, conto, carta, e-mail, rever texto, tirar cara de IA, converter para a ortografia antiga, desfazer o Acordo, pré-AO90.
+description: >-
+  Norma de escrita em português europeu (PT-PT) culto, com a ortografia ANTERIOR ao Acordo Ortográfico de 1990 (acção, óptimo, actual, director, Janeiro, pára, fim-de-semana), e sem marcas de texto gerado por IA. Usar SEMPRE que se escreva, reescreva, traduza ou reveja qualquer texto em português — ensaios, trabalhos académicos, teses, recensões, contos, novelas, romances, livros, cartas, e-mails formais e mensagens informais. Usar também por cima de skills calibradas para PT-BR (humanizar, paralelismo-negativo, better-portuguese, pesquisador-br): o léxico, a sintaxe e a ortografia desta skill prevalecem. Gatilhos — escrever em português, ensaio, trabalho académico, romance, novela, conto, carta, e-mail, rever texto, tirar cara de IA, converter para a ortografia antiga, desfazer o Acordo, pré-AO90.
 metadata:
   author: insforca
   version: "1.1.0"
