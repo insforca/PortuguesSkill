@@ -1,59 +1,84 @@
 ---
 name: escrita-pt-pt
-description: Norma de escrita em português europeu (PT-PT) com a ortografia ANTERIOR ao Acordo Ortográfico de 1990 (acção, óptimo, actual, director, Janeiro, pára, fim-de-semana). Usar SEMPRE que se escreva, reescreva, traduza ou reveja qualquer texto em português para o utilizador — ensaios, trabalhos académicos, teses, recensões, contos, novelas, romances, livros, cartas, e-mails. Usar também por cima de skills calibradas para PT-BR (humanizar, paralelismo-negativo, better-portuguese, pesquisador-br): o léxico, a sintaxe e a ortografia desta skill prevalecem. Gatilhos — escrever em português, ensaio, trabalho académico, romance, novela, conto, rever texto, converter para a ortografia antiga, desfazer o Acordo, pré-AO90.
+description: Norma de escrita em português europeu (PT-PT) culto, com a ortografia ANTERIOR ao Acordo Ortográfico de 1990 (acção, óptimo, actual, director, Janeiro, pára, fim-de-semana), e sem marcas de texto gerado por IA. Usar SEMPRE que se escreva, reescreva, traduza ou reveja qualquer texto em português — ensaios, trabalhos académicos, teses, recensões, contos, novelas, romances, livros, cartas, e-mails formais e mensagens informais. Usar também por cima de skills calibradas para PT-BR (humanizar, paralelismo-negativo, better-portuguese, pesquisador-br): o léxico, a sintaxe e a ortografia desta skill prevalecem. Gatilhos — escrever em português, ensaio, trabalho académico, romance, novela, conto, carta, e-mail, rever texto, tirar cara de IA, converter para a ortografia antiga, desfazer o Acordo, pré-AO90.
 metadata:
   author: insforca
-  version: "1.0.0"
+  version: "1.1.0"
   license: MIT
   repository: https://github.com/insforca/PortuguesSkill
 ---
 
 # Escrita em português europeu (ortografia pré-AO90)
 
-Todo o texto em português que produzires para o utilizador segue três camadas, por esta ordem de prioridade:
+Todo o texto em português que produzires segue quatro camadas, por esta ordem de prioridade:
 
-1. **Ortografia anterior ao AO90** (norma de 1945, como se escrevia em Portugal até 2009–2015). Ver `references/ortografia-pre-ao90.md`.
-2. **Português europeu** no léxico, na sintaxe e na colocação dos pronomes. Ver `references/lexico-sintaxe-pt-pt.md`.
-3. **Convenções do género** do texto (académico, ensaístico ou literário), descritas abaixo.
+1. **Ortografia anterior ao AO90** (norma de 1945, a de Portugal até 2009–2015) → `references/ortografia-pre-ao90.md`
+2. **Português europeu culto** no léxico, na sintaxe e na colocação dos pronomes → `references/lexico-sintaxe-pt-pt.md`
+3. **Registo adequado** ao destinatário (académico, formal, corrente, informal, literário) → `references/registos.md`
+4. **Ausência de marcas de IA**, com a lista de substituições própria de PT-PT → `references/anti-ia-pt-pt.md`
 
-Quando outra skill instalada estiver calibrada para PT-BR (`humanizar`, `humanizer-pt-br`, `better-portuguese`, `pesquisador-br`), aplica as regras de *estilo* dela, mas nunca o vocabulário, a sintaxe ou a ortografia brasileira: esta skill prevalece. A `paralelismo-negativo` é neutra e pode ser usada sem adaptação.
+Carrega cada referência só quando for precisa (para uma mensagem curta basta este ficheiro; para um capítulo, um ensaio ou uma revisão, lê-as todas). Os exemplos de antes e depois estão em `references/exemplos.md`.
+
+Quando outra skill instalada estiver calibrada para PT-BR (`humanizar`, `humanizer-pt-br`, `better-portuguese`, `pesquisador-br`), aplica as regras de *estilo* dela, mas nunca o vocabulário, a sintaxe ou a ortografia brasileira: esta skill prevalece. A `paralelismo-negativo` é neutra e combina com esta.
 
 ## Regras inegociáveis
 
 - **Nunca** escrever na grafia do AO90 (ação, ótimo, atual, diretor, janeiro, para [verbo], fim de semana, hei de).
-- **Nunca** usar o gerúndio progressivo brasileiro ("estou fazendo"); em PT-PT é "estou a fazer".
-- **Nunca** inventar citações, referências, páginas ou DOI. Se a fonte não estiver verificada, dizê-lo e marcar `[REFERÊNCIA A CONFIRMAR]`.
-- Na dúvida sobre a grafia pré-AO90 de uma palavra, **não adivinhar**: assinalar ao utilizador e sugerir a consulta do Dicionário Priberam (opção "grafia antes do Acordo") ou do Vocabulário Ortográfico do Português.
-- Ao converter um texto em AO90 para a grafia antiga, não "corrigir" palavras cuja consoante sempre se pronunciou e se manteve igual (facto, pacto, ficção, convicção, egípcio, rapto, núpcias). E nunca transformar "fato" em "facto" sem ver o sentido: em PT-PT "fato" é vestuário.
+- **Nunca** usar o gerúndio progressivo brasileiro ("estou fazendo"): em PT-PT é "estou a fazer".
+- **Nunca** inventar citações, referências, páginas, datas, DOI ou episódios pessoais. Se a fonte não estiver verificada, dizê-lo e marcar `[REFERÊNCIA A CONFIRMAR]`.
+- **Nunca** pôr no texto entregue comentários sobre o próprio texto ("Aqui está…", "Espero que ajude", "Nota: reescrevi…"). As notas para o utilizador vão fora do texto, depois dele e em poucas linhas.
+- Na dúvida sobre a grafia pré-AO90 de uma palavra, **não adivinhar**: assinalar e sugerir a consulta do Priberam (opção "grafia antes do Acordo").
+- Ao converter um texto do AO90 para a grafia antiga, não "corrigir" palavras cuja consoante sempre se pronunciou (facto, pacto, contacto, ficção, convicção, egípcio, rapto, núpcias), e não trocar "fato" (vestuário) por "facto" sem ver o sentido.
+
+## Porque a grafia anterior ao Acordo
+
+É uma escolha legítima e deliberada, não um erro a corrigir. Ao defendê-la ou explicá-la, os argumentos são estes:
+
+- **Transparência etimológica e coerência de família:** *acto, actor, activo, actual, actividade* e *Egipto, egípcio* mantêm-se ligados entre si e ao latim e às outras línguas europeias (*act, acte, Akt*).
+- **Indicação da pronúncia:** em PT-PT a consoante "muda" assinala muitas vezes a vogal aberta átona (*director, recepção, baptismo, colecção*); sem ela, a leitura correcta deixa de ser evidente para quem não conhece a palavra.
+- **Distinção de homógrafos:** *pára/para, pêlo/pelo, pólo/polo* e *espectador* (que assiste) / *espetador* (que espeta).
+- **Tradição literária:** é a grafia de quase toda a literatura portuguesa do século XX, e continua a ser usada por escritores, tradutores, editoras e jornais de referência.
+- **Uso:** num documento oficial dirigido ao Estado, ou num trabalho escolar com regras explícitas, a instituição pode exigir o AO90. Nesse caso, avisar o utilizador antes de escrever, sem impor a grafia antiga.
+
+## Fluxo de trabalho (várias passagens)
+
+1. **Contrato do texto.** Antes de escrever, fixar o género, o destinatário, o registo, a extensão, o objectivo e os factos obrigatórios. Se faltar um dado essencial (a quem se dirige, que estilo de citação usar, que tom ter), perguntar uma vez, de forma concreta.
+2. **Rascunho** já na grafia, no léxico e no registo certos. Não escrever em PT-BR ou em inglês para traduzir depois: é daí que vêm os decalques.
+3. **Passagem anti-IA** com `references/anti-ia-pt-pt.md`: vocabulário, estrutura, ritmo, fecho.
+4. **Passagem de língua:** pronomes (ênclise e próclise), "a + infinitivo", isto/isso/aquilo, artigo antes do possessivo, regência dos verbos.
+5. **Passagem ortográfica pré-AO90:** consoantes mudas, acentos diferenciais, hífenes, maiúsculas nos meses e nas estações.
+6. **Leitura em voz alta (mental):** se uma frase não se diria assim em Portugal por uma pessoa culta, reescrevê-la.
+7. **Entrega:** o texto limpo e, à parte, no máximo três linhas sobre dúvidas ou escolhas que o utilizador deva confirmar.
+
+Para textos longos (capítulos, teses, livros), fazer as passagens 3 a 6 por secção, não no fim do documento inteiro.
 
 ## Trabalhos académicos (Portugal)
 
-- **Estilo de citação:** perguntar sempre qual o exigido pelo docente, curso ou revista. Em Portugal os mais comuns são **APA 7.ª ed.** (Ciências Sociais, Psicologia, Educação), **Chicago — notas e bibliografia** (História, Filosofia, Letras, Artes), **MLA** (Estudos Literários) e a **NP 405** (norma portuguesa de referências bibliográficas). Não usar ABNT, que é brasileira.
-- Na falta de indicação, em Letras/Humanidades propor Chicago (notas de rodapé); nas Ciências Sociais, APA.
-- **Registo:** impessoal ou primeira pessoa do plural ("procuraremos demonstrar"), conforme a área; a primeira pessoa do singular é aceitável em ensaio e em Humanidades, se o docente a admitir.
-- **Estrutura típica:** Introdução (problema, pergunta, hipótese/tese, metodologia, plano), Desenvolvimento por capítulos, Conclusão (resposta à pergunta, limites, pistas futuras), Bibliografia, Anexos.
-- **Denominações portuguesas:** "dissertação de mestrado", "tese de doutoramento" (não "doutorado"), "relatório de estágio", "trabalho final", "recensão", "orientador(a)", "arguente", "provas públicas", "unidade curricular", "docente", "licenciatura".
-- Resumo + palavras-chave em português e *Abstract* + *Keywords* em inglês, quando exigido.
+- **Estilo de citação:** perguntar sempre qual o exigido pelo docente, curso ou revista. Os mais comuns são **APA 7.ª ed.** (Ciências Sociais, Psicologia, Educação), **Chicago — notas e bibliografia** (História, Filosofia, Letras, Artes), **MLA** (Estudos Literários) e a **NP 405** (norma portuguesa de referências bibliográficas). Não usar ABNT, que é brasileira.
+- Na falta de indicação: em Letras e Humanidades, Chicago (notas de rodapé); nas Ciências Sociais, APA.
+- **Registo:** impessoal ou primeira pessoa do plural de modéstia ("procuraremos demonstrar"); a primeira pessoa do singular é aceitável em ensaio e em Humanidades se o docente a admitir.
+- **Estrutura típica:** Introdução (problema, pergunta, tese, metodologia, plano), Desenvolvimento, Conclusão (resposta à pergunta, limites, pistas), Bibliografia, Anexos.
+- **Denominações portuguesas:** dissertação de mestrado, tese de doutoramento, relatório de estágio, recensão, orientador(a), arguente, provas públicas, unidade curricular, docente, licenciatura.
+- Respeitar as regras da instituição sobre o uso de IA. O objectivo desta skill é escrever bem, não ocultar autoria.
 
 ## Ensaio
 
-- Uma tese clara logo no início; cada parágrafo avança o argumento, não o recapitula.
-- Voz própria, primeira pessoa permitida, digressão controlada — a tradição de Montaigne, de Eduardo Lourenço, de António Sérgio.
-- Citações curtas e integradas; a fonte em nota ou entre parênteses, consoante o estilo escolhido.
+- A tese surge cedo; cada parágrafo faz avançar o argumento e nenhum se limita a recapitulá-lo.
+- Voz própria, opinião assumida, digressão controlada: a tradição de Montaigne, António Sérgio, Eduardo Lourenço e Agustina.
+- A frase longa, bem articulada e bem pontuada é própria do português culto. Alterná-la com frases curtas; não picar tudo em frases de cinco palavras.
 
 ## Ficção (contos, novelas, romances)
 
-- Diálogos com **travessão** (—), à maneira portuguesa, não com aspas: `— Vens amanhã? — perguntou ela.`
-- Registo oral português nas falas: "tu" entre íntimos, "você" com cautela (pode soar distante ou rude), formas de tratamento ("o senhor", "a senhora", "a menina", "o doutor").
-- Léxico, topónimos, comida, objectos e hábitos portugueses quando a acção se passa em Portugal; não misturar realidades brasileiras sem intenção.
-- Trabalhar por cenas e marcos do enredo; as skills `writing-beats`, `writing-shape` e `writing-fragments` ajudam na estrutura, e esta skill fixa a língua.
-- Manter uma "bíblia" do livro (personagens, cronologia, lugares, registo de cada voz) num ficheiro à parte para preservar a coerência entre capítulos.
+- Diálogos com **travessão** (—), à portuguesa: `— Vens amanhã? — perguntou ela.`
+- Falas no registo oral português de cada personagem (ver `references/registos.md`): "tu" entre íntimos, "você" com cautela, formas de tratamento ("o senhor", "a senhora", "a menina", "o senhor doutor").
+- Pormenor concreto português: topónimos, comida, objectos, hábitos, sem misturar realidades brasileiras sem intenção.
+- Estrutura com as skills `writing-beats`, `writing-shape` e `writing-fragments`, se estiverem instaladas. A língua é fixada por esta skill.
+- Manter uma "bíblia" do livro (personagens, cronologia, lugares, a voz de cada um) num ficheiro à parte para preservar a coerência entre capítulos.
 
 ## Revisão final (checklist)
 
-Antes de entregar, verificar:
-
-1. Grafia pré-AO90: consoantes mudas (c/p), acentos diferenciais, hífenes, maiúsculas em meses e estações.
-2. Léxico e sintaxe PT-PT: "a + infinitivo", ênclise, vocabulário europeu.
-3. Sem tiques de IA: correr mentalmente a lista da `humanizar` e a `paralelismo-negativo`.
-4. Citações e referências coerentes com o estilo escolhido e todas verificáveis.
+1. Grafia pré-AO90 sem falhas: consoantes mudas, acentos diferenciais, hífenes, maiúsculas.
+2. Léxico e sintaxe PT-PT: nenhum brasileirismo nem decalque do inglês por descuido.
+3. Registo coerente do princípio ao fim, com o tratamento certo.
+4. Nenhum padrão da lista anti-IA, nenhuma frase de abertura ou fecho vazia, nenhum comentário sobre o próprio texto.
+5. Citações e referências coerentes com o estilo escolhido e todas verificáveis.

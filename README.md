@@ -9,6 +9,10 @@ Até agora, todas as skills de português no ecossistema eram calibradas para o 
 - **Ortografia pré-AO90** — consoantes mudas, acentos diferenciais, hífenes, maiúsculas em meses e estações, com a lista das palavras que *não* se alteram na conversão (facto, contacto, ficção…).
 - **Léxico e sintaxe de Portugal** — "estar a + infinitivo", ênclise e próclise, mesóclise, vocabulário europeu (ecrã, telemóvel, doutoramento, unidade curricular), aspas « ».
 - **Convenções por género** — trabalhos académicos em Portugal (APA, Chicago, MLA, NP 405; nunca ABNT), ensaio e ficção (diálogo com travessão, formas de tratamento).
+- **Anti-IA próprio de PT-PT** — tabela de trocas de vocabulário (crucial, impactar, jornada, desafiador, mergulhar…), padrões de estrutura e de ritmo, decalques do inglês e brasileirismos que denunciam texto gerado.
+- **Registos da fala culta de Portugal** — académico, formal (Exmo. Senhor, Com os melhores cumprimentos), corrente, informal e literário, com a tabela de tratamento (tu, você, o senhor, V. Ex.ª).
+- **Defesa da grafia anterior ao Acordo** — os argumentos etimológicos, fonéticos e literários.
+- **Fluxo de revisão em várias passagens** e exemplos de antes e depois para cada registo.
 - **Prioridade sobre skills PT-BR** — pode ser usada por cima de `humanizar`, `better-portuguese` e afins.
 
 ## Instalação
@@ -24,6 +28,9 @@ pt-pt/antesAO90/
   SKILL.md
   references/ortografia-pre-ao90.md
   references/lexico-sintaxe-pt-pt.md
+  references/anti-ia-pt-pt.md
+  references/registos.md
+  references/exemplos.md
 ```
 
 Correcções e sugestões são bem-vindas por *issue* ou *pull request*.
