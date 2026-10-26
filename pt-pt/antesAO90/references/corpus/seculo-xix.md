@@ -125,31 +125,7 @@ E, mais adiante, a fala do Infante D. Miguel ao avô de Jacinto, caído na rua:
 
 ---
 
-## 8. Almeida Garrett, *Viagens na Minha Terra* (1846) — capítulo I
-
-**Registo:** narrativa de viagem, digressiva, o narrador conversa com o leitor.
-**Fonte:** Wikisource, edição «grafia de 1943» (brasileira). Repus aqui a norma portuguesa: *crónica*, *ideia*, *estreia*, *hei-de*, *Julho*, *Inverno*.
-
-> Que viaje à roda do seu quarto quem está à beira dos Alpes, de Inverno, em Turim, que é quase tão frio como S. Petersburgo — entende-se. Mas com este clima, com esse ar que Deus nos deu, onde a laranjeira cresce na horta, e o mato é de murta, o próprio Xavier de Maistre, que aqui escrevesse, ao menos ia até o quintal.
->
-> Eu muitas vezes, nestas sufocadas noites de estio, viajo até a minha janela para ver uma nesguita de Tejo que está no fim da rua, e me enganar com uns verdes de árvores que ali vegetam sua laboriosa infância nos entulhos do Cais do Sodré. E nunca escrevi estas minhas viagens nem as suas impressões pois tinham muito que ver! Foi sempre ambiciosa a minha pena: pobre e soberba, quer assunto mais largo. Pois hei-de dar-lho. Vou nada menos que a Santarém: e protesto que de quanto vir e ouvir, de quanto eu pensar e sentir se há-de fazer crónica.
->
-> […]
->
-> Pois por isso mesmo vou: *pronunciei-me*.
->
-> São 17 deste mês de Julho, ano da graça de 1843, uma segunda-feira, dia sem nota e de boa estreia. Seis horas da manhã a dar em S. Paulo, e eu a caminhar para o Terreiro do Paço.
-
-**O que observar:**
-- É o tom do português culto e conversado: auto-ironia (*Foi sempre ambiciosa a minha pena: pobre e soberba*), diminutivo afectivo (*uma nesguita de Tejo*), exclamação rara e bem colocada.
-- A frase-parágrafo de uma linha (*Pois por isso mesmo vou: pronunciei-me.*) corta a digressão.
-- A data e a hora exactas (*17 deste mês de Julho… Seis horas da manhã a dar em S. Paulo*): a crónica ancora-se no concreto.
-- *hei-de dar-lho*: contracção pronominal (*lhe + o*) natural em PT-PT e quase extinta no Brasil.
-- *até o quintal*, *viajo até a minha janela*: Garrett ainda usa *até* sem *a*. Hoje, em PT-PT, a norma prefere *até ao*.
-
----
-
-## 9. Fialho de Almeida, *Os Gatos* (crónica de 10 de Dezembro de 1891)
+## 8. Fialho de Almeida, *Os Gatos* (crónica de 10 de Dezembro de 1891)
 
 **Registo:** crónica satírica e reportagem de costumes (*Os Gatos* era uma «publicação mensal de inquérito à vida portuguesa»).
 **Fonte:** Wikisource, a partir da 6.ª edição (Livraria Clássica, 1933), vol. V. A transcrição em linha usa a grafia do AO90; repus aqui *excepção*, *dejectos*, *desinfectar*.
@@ -168,7 +144,7 @@ E, mais adiante, a fala do Infante D. Miguel ao avô de Jacinto, caído na rua:
 
 ---
 
-## 10. Trindade Coelho, «Idílio Rústico», em *Os Meus Amores* (1891; 2.ª ed. 1894)
+## 9. Trindade Coelho, «Idílio Rústico», em *Os Meus Amores* (1891; 2.ª ed. 1894)
 
 **Registo:** conto rural, narração cuidada e falas populares de Trás-os-Montes.
 **Fonte:** Project Gutenberg n.º 17503 (versão com ortografia já actualizada pelos voluntários do Gutenberg).

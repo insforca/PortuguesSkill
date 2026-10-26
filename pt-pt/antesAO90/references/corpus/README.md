@@ -12,8 +12,10 @@ Este corpus serve para **ancorar a voz**. Antes de escrever um texto longo (um c
 | Carta pessoal, e-mail cordial | Pessoa a Casais Monteiro, Fradique Mendes |
 | Carta íntima, mensagem a um amigo | Pessoa a Sá-Carneiro (1916) |
 | Crónica, artigo de opinião, editorial | Eça (*Cartas de Inglaterra*), Ramalho (*As Farpas*), Fialho (*Os Gatos*) |
-| Crónica de viagem, texto conversado com o leitor | Garrett (*Viagens na Minha Terra*) |
 | Ensaio polémico, recensão, resposta pública | Antero (*Bom-senso e bom-gosto*), Álvaro de Campos |
+| Discurso, intervenção oral formal, apresentação | `documentos-oficiais.md`: Matos Taquenho (1950), Jaime Gama e Luís Roseira (1975) |
+| Relatório, requerimento, texto jurídico ou administrativo | `documentos-oficiais.md`: exposição de motivos da Câmara Corporativa (1966) |
+| Texto solene ou institucional | `documentos-oficiais.md`: Preâmbulo da Constituição de 1976 |
 | Qualquer coisa, para ver o que **não** fazer | `contrastes.md` |
 
 **Imitar** a construção da frase (períodos longos bem articulados, frases curtas a seguir), a ironia, a concretude dos pormenores, a colocação dos pronomes, o uso do ponto e vírgula e dos dois-pontos, e a maneira de abrir sem preâmbulo e de fechar sem resumo.
@@ -27,8 +29,9 @@ Eça (*"Os ingleses estão experimentando"*, 1880) e Pessoa (*"estou escrevendo 
 ## Critérios de selecção e direitos
 
 - **Transcrições** (`seculo-xix.md`, `seculo-xx-1900-1955.md`): só autores no **domínio público** em Portugal, isto é, falecidos há mais de 70 anos (até 1955, inclusive).
+- **Documentos oficiais e discursos parlamentares, 1950–1976** (`documentos-oficiais.md`): transcritos em excerto, porque os textos oficiais e os discursos perante assembleias não são protegidos pelo direito de autor (CDADC, art. 7.º). É a melhor fonte para a grafia e o registo formal do período 1945–1990, que a literatura protegida não pode cobrir.
 - **Anos 50 a 70** (`anos-50-70.md`): os autores ainda estão protegidos por direitos de autor, por isso há **fichas de estilo** com referência bibliográfica e sem transcrição. Quem tiver os livros pode guardar excertos numa pasta `corpus/privado/` para uso pessoal (essa pasta não se publica: ver `.gitignore`).
-- **Fontes:** Project Gutenberg (edições originais digitalizadas), Arquivo Pessoa (arquivopessoa.net) e Wikisource em português, indicadas em cada excerto. Atenção: algumas transcrições do Wikisource estão na grafia brasileira de 1943 ou já no AO90; nesses casos a norma pré-AO90 portuguesa foi reposta e isso fica assinalado no excerto.
+- **Fontes:** Project Gutenberg (edições originais digitalizadas), Arquivo Pessoa (arquivopessoa.net) e Wikisource em português, indicadas em cada excerto. Não se usam transcrições em grafia brasileira. Quando uma transcrição portuguesa vem já no AO90, a norma pré-AO90 é reposta e isso fica assinalado no excerto.
 
 ## Normalização ortográfica
 

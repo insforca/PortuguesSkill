@@ -13,7 +13,7 @@ Até agora, todas as skills de português no ecossistema eram calibradas para o 
 - **Registos da fala culta de Portugal** — académico, formal (Exmo. Senhor, Com os melhores cumprimentos), corrente, informal e literário, com a tabela de tratamento (tu, você, o senhor, V. Ex.ª).
 - **Defesa da grafia anterior ao Acordo** — os argumentos etimológicos, fonéticos e literários.
 - **Fluxo de revisão em várias passagens** e exemplos de antes e depois para cada registo.
-- **Corpus de calibração** — excertos de Garrett, Camilo, Eça, Antero, Ramalho, Fialho, Trindade Coelho, Raul Brandão, Sá-Carneiro e Pessoa (domínio público, normalizados para a grafia pré-AO90), com notas de estilo; fichas dos anos 50 a 70 (Sophia, Agustina, Cardoso Pires, Maria Judite de Carvalho, Saramago cronista, Eduardo Lourenço); e contrastes entre a versão "IA" e o original, para ancorar a voz.
+- **Corpus de calibração** — excertos de Camilo, Eça, Antero, Ramalho, Fialho, Trindade Coelho, Raul Brandão, Sá-Carneiro e Pessoa (domínio público, normalizados para a grafia pré-AO90), com notas de estilo; documentos oficiais e discursos parlamentares de 1950 a 1976 (Assembleia Nacional, Câmara Corporativa, Assembleia Constituinte, Preâmbulo da Constituição de 1976); fichas dos anos 50 a 70 (Sophia, Agustina, Cardoso Pires, Maria Judite de Carvalho, Saramago cronista, Eduardo Lourenço); e contrastes entre a versão "IA" e o original, para ancorar a voz.
 - **Prioridade sobre skills PT-BR** — pode ser usada por cima de `humanizar`, `better-portuguese` e afins.
 
 ## Instalação
@@ -32,7 +32,7 @@ pt-pt/antesAO90/
   references/anti-ia-pt-pt.md
   references/registos.md
   references/exemplos.md
-  references/corpus/            (README, seculo-xix, seculo-xx-1900-1955, anos-50-70, contrastes)
+  references/corpus/            (README, seculo-xix, seculo-xx-1900-1955, documentos-oficiais, anos-50-70, contrastes)
 ```
 
 Correcções e sugestões são bem-vindas por *issue* ou *pull request*.
