@@ -67,3 +67,15 @@ Cada par mostra um texto original do corpus ao lado de uma versão escrita **de 
 ## Lição geral
 
 Os textos humanos de referência têm sempre pelo menos uma destas coisas: **um pormenor verificável** (data, lugar, nome, objecto), **uma imagem inesperada**, **uma posição assumida**, **um desvio de ritmo** (frase curta depois de uma longa, um parêntese, uma correcção). A versão IA não tem nenhuma. Ao rever um texto, procura estas quatro marcas; se faltarem todas, reescreve.
+
+---
+
+## Anexo — 6. Descrever uma cidade com crítica
+
+**Versão IA:**
+> Setúbal é uma encantadora cidade costeira, conhecida pela sua rica gastronomia e pelas suas belas paisagens. No entanto, apesar do seu charme inegável, a cidade enfrenta alguns desafios em termos de infraestruturas e limpeza urbana, que merecem a atenção das autoridades.
+
+**Original (Fialho de Almeida, *Os Gatos*, 1891):**
+> Setúbal é, como naturalmente sabem, uma cidade pequena, na margem do Sado, vivendo magramente de banhistas e fábricas de sardinha. […] e uma estátua a Bocage, vestida de criado d'ópera, defronte dum portal gótico e ao pé dum chafariz seco.
+
+**Diferença:** a IA usa elogio genérico (*encantadora*, *rica*, *belas*), *desafios*, *infraestruturas* (AO90) e uma crítica tímida, embrulhada em eufemismo. Fialho diz do que vive a cidade (*magramente*) e deixa que um pormenor visível (a estátua, o chafariz seco) faça a crítica toda.

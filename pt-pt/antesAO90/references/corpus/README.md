@@ -6,10 +6,13 @@ Este corpus serve para **ancorar a voz**. Antes de escrever um texto longo (um c
 
 | Vais escrever… | Lê primeiro |
 |---|---|
-| Romance, conto, descrição | Eça (*Os Maias*, *A Cidade e as Serras*), Camilo |
+| Romance, conto, descrição | Eça (*Os Maias*, *A Cidade e as Serras*), Camilo, Sá-Carneiro |
+| Diálogo e fala popular | Trindade Coelho («Idílio Rústico»), Eça (fala do Infante) |
 | Memórias, diário, prosa reflexiva | Raul Brandão (*Memórias*, *Húmus*) |
 | Carta pessoal, e-mail cordial | Pessoa a Casais Monteiro, Fradique Mendes |
-| Crónica, artigo de opinião, editorial | Eça (*Cartas de Inglaterra*), Ramalho (*As Farpas*) |
+| Carta íntima, mensagem a um amigo | Pessoa a Sá-Carneiro (1916) |
+| Crónica, artigo de opinião, editorial | Eça (*Cartas de Inglaterra*), Ramalho (*As Farpas*), Fialho (*Os Gatos*) |
+| Crónica de viagem, texto conversado com o leitor | Garrett (*Viagens na Minha Terra*) |
 | Ensaio polémico, recensão, resposta pública | Antero (*Bom-senso e bom-gosto*), Álvaro de Campos |
 | Qualquer coisa, para ver o que **não** fazer | `contrastes.md` |
 
@@ -25,7 +28,7 @@ Eça (*"Os ingleses estão experimentando"*, 1880) e Pessoa (*"estou escrevendo 
 
 - **Transcrições** (`seculo-xix.md`, `seculo-xx-1900-1955.md`): só autores no **domínio público** em Portugal, isto é, falecidos há mais de 70 anos (até 1955, inclusive).
 - **Anos 50 a 70** (`anos-50-70.md`): os autores ainda estão protegidos por direitos de autor, por isso há **fichas de estilo** com referência bibliográfica e sem transcrição. Quem tiver os livros pode guardar excertos numa pasta `corpus/privado/` para uso pessoal (essa pasta não se publica: ver `.gitignore`).
-- **Fontes:** Project Gutenberg (edições originais digitalizadas) e Arquivo Pessoa (arquivopessoa.net), indicadas em cada excerto.
+- **Fontes:** Project Gutenberg (edições originais digitalizadas), Arquivo Pessoa (arquivopessoa.net) e Wikisource em português, indicadas em cada excerto. Atenção: algumas transcrições do Wikisource estão na grafia brasileira de 1943 ou já no AO90; nesses casos a norma pré-AO90 portuguesa foi reposta e isso fica assinalado no excerto.
 
 ## Normalização ortográfica
 
