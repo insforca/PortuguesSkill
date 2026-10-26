@@ -44,7 +44,7 @@ def ler_tsv(nome):
         for l in f:
             if l.startswith("#") or not l.strip():
                 continue
-            linhas.append(l.rstrip("\n").split("\t"))
+            linhas.append(l.rstrip("\r\n").split("\t"))
     return linhas
 
 

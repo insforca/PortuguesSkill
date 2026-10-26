@@ -46,7 +46,7 @@ def ler_pedidos():
         for l in f:
             if l.startswith("#") or not l.strip():
                 continue
-            i, registo, pedido = l.rstrip("\n").split("\t")
+            i, registo, pedido = l.rstrip("\r\n").split("\t")
             pedidos.append((i, registo, pedido))
     return pedidos
 
