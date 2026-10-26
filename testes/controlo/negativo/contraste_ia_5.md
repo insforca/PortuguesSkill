@@ -1,0 +1,1 @@
+Embora respeite profundamente a sua opinião, gostaria de apresentar uma perspetiva alternativa. Por um lado, compreendo os seus argumentos; por outro, considero que existem aspetos que merecem uma análise mais aprofundada.

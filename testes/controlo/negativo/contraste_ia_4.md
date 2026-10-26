@@ -1,0 +1,1 @@
+Nos dias de hoje, a situação no Afeganistão levanta questões fundamentais. É importante salientar que a história parece repetir-se, o que nos leva a refletir sobre as lições do passado. Em suma, trata-se de um tema complexo e multifacetado.

@@ -1,0 +1,47 @@
+# Marcas de texto gerado por IA. Expressão regular (sem distinção de maiúsculas)	limite por texto	sugestão
+\bcrucia(l|is)\b	0	decisivo, central — ou cortar
+\bdesempenha(m|r)? um papel\b	0	conta, pesa, está no centro de
+\b(no mundo (actual|atual|de hoje)|nos dias de hoje|hoje em dia)\b	0	cortar ou datar com precisão
+\bcada vez mais\b	1	cortar ou dar o dado
+\bé (importante|fundamental|essencial) (salientar|notar|sublinhar|referir|destacar|ressaltar)\b	0	cortar e dizer a coisa
+\bvale (ressaltar|destacar|lembrar|a pena destacar)\b	0	cortar
+\b(em suma|em resumo|em conclusão|em síntese)\b	0	concluir sem anunciar
+\balém disso\b	1	aliás, de resto, acresce que — ou nada
+\badicionalmente\b	0	além de que, acresce que
+\bou seja\b	1	isto é, quer dizer — ou cortar
+\bfundamenta(l|is)\b	1	central, importante — ou cortar
+\bjornadas?\b	0	percurso, caminho
+\bdesafiador(a|es|as)?\b	0	difícil, exigente
+\bdesafios?\b	1	problema, dificuldade, obstáculo
+\bimpacta(r|m|ndo|do|da)?\b	0	afectar, ter efeito em
+\b(potencializa|alavanca)(r|m|ndo)?\b	0	reforçar, aumentar, aproveitar
+\bmergulha(r|mos)\b	0	analisar, estudar
+\btapeçaria\b	0	cortar
+\bnavega(r|ndo) (as|pelas|nas) complexidades\b	0	cortar
+\becossistemas?\b	0	cortar ou dizer em concreto
+\bsinergias?\b	0	cortar
+\bholístic[oa]s?\b	0	cortar
+\brobust[oa]s?\b	0	consistente, sólido — ou cortar
+\bem constante evolução\b	0	cortar
+\b(um|uma) verdadeir[oa] testemunho\b	0	prova de, mostra que
+\btestemunho de\b	0	prova de
+\bpanorama\b	0	situação, quadro
+\bneste cenário\b	0	neste contexto, aqui
+\bexplora(r|mos|ndo)\b	1	analisar, estudar, tratar
+\bnão (é|são|se trata de) (apenas|só|somente)\b	1	paralelismo negativo: no máximo um por texto
+\bnão (apenas|só) [^.]{1,60}, mas também\b	1	paralelismo negativo: no máximo um por texto
+\bespero que (isto|isso|esta|este) (ajude|seja útil)\b	0	comentário de assistente: retirar do texto
+\b(excelente|óptima|ótima|boa) pergunta\b	0	comentário de assistente: retirar
+\bfascinante\b	0	cortar
+\brico e diversificado\b	0	cortar
+\bespero que (esta|a minha|a) (mensagem|carta) o?a? ?encontre bem\b	0	fórmula de abertura vazia: começar pelo assunto
+\bé com (grande |enorme |muito )?(prazer|satisfação|alegria) que\b	0	fórmula vazia: dizer a coisa
+\bde forma (detalhada|abrangente|clara e concisa|eficaz|significativa)\b	0	cortar ou dizer como
+\bimensamente\b	0	muito — ou cortar
+\brepleto de|repleta de\b	0	cheio de — ou dar o pormenor
+\bpor um lado\b	0	falso equilíbrio: tomar posição, ou mostrar os dois lados com factos
+\bnão é [^.]{1,50}, mas sim\b	0	paralelismo negativo: dizer só o que é
+\benfrenta(m|r)? (alguns |vários |diversos |muitos )?desafios\b	0	dizer qual o problema
+\b(encantador|encantadora|inegável|inesquecível|mágico|mágica)\b	0	adjectivo de catálogo: dar um pormenor concreto
+\bmerece(m)? (a )?(nossa )?(atenção|reflexão)\b	0	dizer o que se propõe
+\bmoldar quem (sou|somos)\b	0	cortar

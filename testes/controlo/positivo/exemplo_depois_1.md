@@ -1,0 +1,1 @@
+Em *Os Maias*, Eça de Queirós faz do fracasso de uma família o retrato de uma elite incapaz de agir. É essa relação entre a decadência privada e a nacional que este trabalho procura analisar, a partir da recepção crítica do romance entre 1888 e 1910.

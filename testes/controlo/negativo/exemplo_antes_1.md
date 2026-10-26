@@ -1,0 +1,1 @@
+No mundo atual, a literatura desempenha um papel crucial na construção da identidade nacional. É importante ressaltar que autores como Eça de Queirós exploram temas complexos, ricos e multifacetados. Dessa forma, este trabalho busca mergulhar nessa temática.

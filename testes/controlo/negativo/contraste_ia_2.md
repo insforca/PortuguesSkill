@@ -1,0 +1,1 @@
+Ao olhar para trás, percebo que a vida é uma jornada repleta de desafios e aprendizagens. Não me arrependo de nada, pois cada experiência contribuiu para moldar quem sou hoje. Afinal, o importante não é o destino, mas sim o caminho.

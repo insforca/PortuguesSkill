@@ -1,0 +1,83 @@
+# Brasileirismos lexicais — curadoria manual a partir da comparação CHAVE (Folha vs Público, 1994-1995).
+# Só léxico: a grafia brasileira (ação, ônibus, econômico) é detectada pelos dicionários.
+# forma(s) separadas por |	alternativa em PT-PT	nível (erro|aviso)	nota
+equipe|equipes	equipa / equipas	erro
+time|times	equipa / equipas	aviso	só no sentido desportivo
+controle|controles	controlo / controlos	erro	«controle» é a 3.ª pessoa do conjuntivo de controlar; no nome, controlo
+registro|registros	registo / registos	erro
+registrar|registrou|registrado|registrada|registrados|registradas|registra|registraram|registrar-se	registar / registou / registado…	erro
+usuário|usuários|usuária|usuárias	utilizador / utilizadores	erro
+esporte|esportes|esportivo|esportiva	desporto / desportivo	erro
+aluguel|aluguéis	renda (de casa) / aluguer (de carro)	erro
+trem|trens	comboio / comboios	erro
+caminhão|caminhões	camião / camiões	erro
+metrô	metro	erro
+câmera|câmeras	câmara / câmaras (fotográfica, de filmar)	erro
+terremoto|terremotos	terramoto / terramotos	aviso	«terremoto» é arcaico em PT-PT
+garoto|garotos	rapaz / miúdo	erro
+garota|garotas|moça|moças	rapariga / miúda	erro
+banheiro|banheiros	casa de banho	erro
+cardápio|cardápios	ementa / menu	erro
+delegacia|delegacias	esquadra / posto	erro
+presídio|presídios	prisão / estabelecimento prisional	erro
+detento|detentos	recluso / reclusos	erro
+vestibular|vestibulares	exame de acesso ao ensino superior	erro
+quadrinhos	banda desenhada	erro
+camisinha|camisinhas	preservativo	erro
+prefeitura|prefeituras	câmara municipal	erro
+prefeito|prefeitos|prefeita	presidente da câmara	erro
+câncer	cancro	erro
+varejo|varejista	retalho / retalhista	erro
+estoque|estoques	stock / existências	erro
+faturamento	facturação	erro
+licitação|licitações	concurso público	erro
+liminar|liminares	providência cautelar	aviso	no sentido jurídico
+aposentadoria|aposentadorias	reforma / reformas	erro
+aposentado|aposentados|aposentada|aposentadas	reformado / reformados	erro
+previdência	segurança social	aviso
+goleiro|goleiros	guarda-redes	erro
+zagueiro|zagueiros	defesa-central	erro
+gol|gols	golo / golos	erro
+torcida|torcidas	claque / adeptos	erro
+torcedor|torcedores	adepto / adeptos	erro
+vôlei	voleibol	erro
+basquete	basquetebol	erro
+pênalti|pênaltis	penálti / grande penalidade	erro
+atacante|atacantes	avançado / avançados	erro
+treinamento|treinamentos	treino / formação	erro
+planejamento	planeamento	erro
+planejar|planeja|planejam|planejou|planejado|planejada	planear / planeia / planeou…	erro
+ruim|ruins	mau / maus / fraco	erro
+turnê|turnês	digressão / digressões	erro
+trilha sonora	banda sonora	erro
+rodovia|rodovias	estrada / auto-estrada	erro
+usina|usinas	central (eléctrica) / fábrica	aviso
+montadora|montadoras	fabricante de automóveis	erro
+autopeças	peças para automóveis	erro
+gravadora|gravadoras	editora discográfica	erro
+estupro|estupros	violação	erro
+shopping|shoppings	centro comercial	erro
+mídia	media / comunicação social	erro
+premiê	primeiro-ministro	erro
+comitê|comitês	comité / comités	erro
+inadimplência	incumprimento	erro
+sonegação	fuga / evasão fiscal	erro
+coleta	recolha	erro
+locação	arrendamento / aluguer	aviso
+hospedagem	alojamento	erro
+apuração	apuramento	aviso
+laudo|laudos	relatório pericial / parecer	erro
+inciso	alínea	aviso	no sentido jurídico
+justificativa|justificativas	justificação	erro
+carentes	carenciados / necessitados	aviso
+liberar|liberou|liberado|liberada|liberação	libertar / desbloquear / autorizar	aviso
+reajuste|reajustes	actualização / aumento	aviso
+fato|fatos	facto / factos (acontecimento); fato é vestuário	aviso	verificar o sentido
+você|vocês	tratamento adequado (tu, o senhor, a senhora) ou forma impessoal	aviso	ver registos.md
+a gente	nós	aviso	só admissível em fala de personagem
+pra|pro|pros|pras	para / para o / para os / para as	erro	só em fala de personagem
+tá|tô	está / estou	erro	só em fala de personagem
+chance|chances	hipótese / possibilidade	aviso
+demanda	procura	aviso	no sentido económico
+show|shows	espectáculo / concerto	aviso
+buscar|busca|buscando|buscou	procurar	aviso	«buscar» existe em PT, mas «procurar» é o mais comum

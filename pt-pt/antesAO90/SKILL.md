@@ -4,7 +4,7 @@ description: >-
   Norma de escrita em português europeu (PT-PT) culto, com a ortografia ANTERIOR ao Acordo Ortográfico de 1990 (acção, óptimo, actual, director, Janeiro, pára, fim-de-semana), e sem marcas de texto gerado por IA. Usar SEMPRE que se escreva, reescreva, traduza ou reveja qualquer texto em português — ensaios, trabalhos académicos, teses, recensões, contos, novelas, romances, livros, cartas, e-mails formais e mensagens informais. Usar também por cima de skills calibradas para PT-BR (humanizar, paralelismo-negativo, better-portuguese, pesquisador-br): o léxico, a sintaxe e a ortografia desta skill prevalecem. Gatilhos — escrever em português, ensaio, trabalho académico, romance, novela, conto, carta, e-mail, rever texto, tirar cara de IA, converter para a ortografia antiga, desfazer o Acordo, pré-AO90.
 metadata:
   author: insforca
-  version: "1.4.0"
+  version: "1.5.0"
   license: MIT
   repository: https://github.com/insforca/PortuguesSkill
 ---
@@ -57,9 +57,12 @@ Quando outra skill instalada estiver calibrada para PT-BR (`humanizar`, `humaniz
 4. **Passagem de língua:** pronomes (ênclise e próclise), "a + infinitivo", isto/isso/aquilo, artigo antes do possessivo, regência dos verbos.
 5. **Passagem ortográfica pré-AO90:** consoantes mudas, acentos diferenciais, hífenes, maiúsculas nos meses e nas estações.
 6. **Leitura em voz alta (mental):** se uma frase não se diria assim em Portugal por uma pessoa culta, reescrevê-la.
-7. **Entrega:** o texto limpo e, à parte, no máximo três linhas sobre dúvidas ou escolhas que o utilizador deva confirmar.
+7. **Verificação automática:** se puderes correr comandos, grava o texto num ficheiro e corre `python scripts/verificar.py <ficheiro>` (a partir da pasta desta skill). Corrige todos os ERROS. Decide os AVISOS caso a caso: muitos são escolhas legítimas. As NOTAS são palavras que os dicionários não conhecem, normalmente nomes ou termos raros. Se o verificador não estiver disponível, usa as listas em `dados/` (`ao90_preao.tsv`, `brasileirismos.tsv`, `vocabulario_ia.tsv`) como lista de verificação.
+8. **Entrega:** o texto limpo e, à parte, no máximo três linhas sobre dúvidas ou escolhas que o utilizador deva confirmar.
 
-Para textos longos (capítulos, teses, livros), fazer as passagens 3 a 6 por secção, não no fim do documento inteiro.
+Para textos longos (capítulos, teses, livros), fazer as passagens 3 a 7 por secção, não no fim do documento inteiro.
+
+**Instalação do verificador** (uma vez): `python -m pip install spylls` e `python scripts/instalar_dicionarios.py`. Sem os dicionários, o verificador funciona em modo reduzido: usa a lista das cerca de 1400 formas AO90 mais frequentes, os brasileirismos, as marcas de IA e as regras de sintaxe.
 
 ## Trabalhos académicos (Portugal)
 

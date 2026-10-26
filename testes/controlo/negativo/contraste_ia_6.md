@@ -1,0 +1,1 @@
+Setúbal é uma encantadora cidade costeira, conhecida pela sua rica gastronomia e pelas suas belas paisagens. No entanto, apesar do seu charme inegável, a cidade enfrenta alguns desafios em termos de infraestruturas e limpeza urbana, que merecem a atenção das autoridades.

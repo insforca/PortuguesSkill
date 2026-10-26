@@ -1,0 +1,1 @@
+Caro Adolfo, espero que esta mensagem o encontre bem! Agradeço imensamente a sua carta e as suas perguntas tão pertinentes. É com grande prazer que vou responder a cada uma delas de forma detalhada e abrangente.
