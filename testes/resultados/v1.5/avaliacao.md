@@ -1,6 +1,6 @@
 # Avaliação: v1.5
 
-**20 textos · 4137 palavras · 0 erros (0.0 por mil palavras) · 5 avisos (1.2 por mil)**
+**20 textos · 4137 palavras · 0 erros (0.0 por mil palavras) · 6 avisos (1.5 por mil)**
 
 | id | registo | palavras | erros | avisos | erros encontrados |
 |---|---|---|---|---|---|
@@ -21,7 +21,7 @@
 | 15 | informal | 109 | 0 | 1 |  |
 | 16 | informal | 89 | 0 | 1 |  |
 | 17 | ficção | 282 | 0 | 1 |  |
-| 18 | ficção | 257 | 0 | 2 |  |
+| 18 | ficção | 257 | 0 | 3 |  |
 | 19 | ficção | 224 | 0 | 0 |  |
 | 20 | ficção | 161 | 0 | 0 |  |
 
@@ -33,3 +33,4 @@
 | AVISO | brasileirismo | 1 |
 | AVISO | perguntas retóricas | 1 |
 | AVISO | ritmo | 1 |
+| AVISO | marca de IA | 1 |
