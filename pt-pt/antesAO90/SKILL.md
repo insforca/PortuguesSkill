@@ -1,10 +1,10 @@
 ---
-name: escrita-pt-pt
+name: portugues-skill
 description: >-
   Norma de escrita em português europeu (PT-PT) culto, com a ortografia ANTERIOR ao Acordo Ortográfico de 1990 (acção, óptimo, actual, director, Janeiro, pára, fim-de-semana), e sem marcas de texto gerado por IA. Usar SEMPRE que se escreva, reescreva, traduza ou reveja qualquer texto em português — ensaios, trabalhos académicos, teses, recensões, contos, novelas, romances, livros, cartas, e-mails formais e mensagens informais. Usar também por cima de skills calibradas para PT-BR (humanizar, paralelismo-negativo, better-portuguese, pesquisador-br): o léxico, a sintaxe e a ortografia desta skill prevalecem. Gatilhos — escrever em português, ensaio, trabalho académico, romance, novela, conto, carta, e-mail, rever texto, tirar cara de IA, converter para a ortografia antiga, desfazer o Acordo, pré-AO90.
 metadata:
   author: insforca
-  version: "1.1.0"
+  version: "1.2.0"
   license: MIT
   repository: https://github.com/insforca/PortuguesSkill
 ---
@@ -20,12 +20,20 @@ Todo o texto em português que produzires segue quatro camadas, por esta ordem d
 
 Carrega cada referência só quando for precisa (para uma mensagem curta basta este ficheiro; para um capítulo, um ensaio ou uma revisão, lê-as todas). Os exemplos de antes e depois estão em `references/exemplos.md`.
 
+## Corpus de calibração (ancorar a voz)
+
+Em `references/corpus/` há prosa portuguesa de referência: Eça, Camilo, Antero, Ramalho, Raul Brandão e Pessoa (transcritos, em domínio público, normalizados para a grafia pré-AO90), fichas de estilo dos anos 50 a 70 (Sophia, Agustina, Cardoso Pires, Maria Judite de Carvalho, Saramago cronista, Eduardo Lourenço) e contrastes entre a versão "IA" e o original.
+
+- **Antes de um texto longo** (capítulo, ensaio, crónica, carta importante), lê `corpus/README.md` e um ou dois excertos do registo pretendido. Imita o ritmo, a sintaxe, a pontuação e a concretude. **Não imites** o vocabulário datado nem o gerúndio dos textos antigos.
+- **Ao rever**, usa `corpus/contrastes.md`: um texto humano tem pelo menos um pormenor verificável, uma imagem inesperada, uma posição assumida ou um desvio de ritmo. Se não tiver nenhum, reescreve.
+- Se o utilizador tiver excertos próprios de autores protegidos, guardam-se em `corpus/privado/`, que não se publica.
+
 Quando outra skill instalada estiver calibrada para PT-BR (`humanizar`, `humanizer-pt-br`, `better-portuguese`, `pesquisador-br`), aplica as regras de *estilo* dela, mas nunca o vocabulário, a sintaxe ou a ortografia brasileira: esta skill prevalece. A `paralelismo-negativo` é neutra e combina com esta.
 
 ## Regras inegociáveis
 
 - **Nunca** escrever na grafia do AO90 (ação, ótimo, atual, diretor, janeiro, para [verbo], fim de semana, hei de).
-- **Nunca** usar o gerúndio progressivo brasileiro ("estou fazendo"): em PT-PT é "estou a fazer".
+- **Nunca** usar o gerúndio progressivo ("estou fazendo"): na norma culta actual de Portugal é "estou a fazer". (Eça e Pessoa ainda o usavam, e há falares do Sul que o mantêm; só se admite em diálogo de personagem ou em pastiche declarado.)
 - **Nunca** inventar citações, referências, páginas, datas, DOI ou episódios pessoais. Se a fonte não estiver verificada, dizê-lo e marcar `[REFERÊNCIA A CONFIRMAR]`.
 - **Nunca** pôr no texto entregue comentários sobre o próprio texto ("Aqui está…", "Espero que ajude", "Nota: reescrevi…"). As notas para o utilizador vão fora do texto, depois dele e em poucas linhas.
 - Na dúvida sobre a grafia pré-AO90 de uma palavra, **não adivinhar**: assinalar e sugerir a consulta do Priberam (opção "grafia antes do Acordo").

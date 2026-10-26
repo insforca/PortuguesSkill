@@ -46,7 +46,7 @@ Regra geral: **na dúvida, cortar**. Metade destas expressões não precisa de s
 
 ## 2. Estrutura e ritmo
 
-- **Regra de três.** A IA enumera sempre três adjectivos ou três exemplos. Usar dois, um ou quatro, conforme o caso.
+- **Regra de três.** A IA enumera sempre três adjectivos ou três exemplos. Usar dois, um ou quatro, conforme o caso. A tríade não é proibida: Antero usa-a com função retórica (ver `corpus/seculo-xix.md`). O vício está no automatismo.
 - **Parágrafos todos do mesmo tamanho.** Variar: um parágrafo de uma linha ao lado de outro de dez é normal em boa prosa.
 - **Frases todas curtas, ou todas médias.** O português culto alterna a frase longa, subordinada e bem pontuada (Vieira, Eça, Saramago à sua maneira) com a frase seca.
 - **Abertura em funil** ("Desde tempos imemoriais…", "Num mundo cada vez mais…"). Entrar directamente no assunto.
@@ -55,7 +55,7 @@ Regra geral: **na dúvida, cortar**. Metade destas expressões não precisa de s
 - **Falso equilíbrio** ("por um lado… por outro…" seguido de nada): tomar posição quando o género o pede.
 - **Perguntas retóricas em série** a abrir secções: cortar.
 - **Formatação de *chatbot* em prosa:** negritos espalhados, listas com marcadores num ensaio, títulos a cada três parágrafos, dois-pontos em todos os títulos, emojis. Num ensaio, numa carta ou num capítulo, escrever em parágrafos.
-- **Travessões em excesso.** Na prosa portuguesa o travessão é recurso legítimo, mas vírgulas, parênteses e dois-pontos fazem o mesmo trabalho com mais variedade. No máximo um par por parágrafo, fora dos diálogos.
+- **Travessões em excesso.** Na prosa portuguesa o travessão é recurso legítimo, mas vírgulas, parênteses e dois-pontos fazem o mesmo trabalho com mais variedade. No máximo um par por parágrafo, fora dos diálogos, salvo quando o travessão é o estilo assumido do texto inteiro, como em Raul Brandão (ver `corpus/seculo-xx-1900-1955.md`).
 - **Aspas tipográficas inglesas** ("…"): em PT-PT preferir « ».
 
 ## 3. Tom
@@ -68,7 +68,7 @@ Regra geral: **na dúvida, cortar**. Metade destas expressões não precisa de s
 
 ## 4. Sinais de "português traduzido" ou brasileiro
 
-- Gerúndio progressivo ("estou escrevendo") → "estou a escrever".
+- Gerúndio progressivo ("estou escrevendo") → "estou a escrever". (Nos textos antigos do corpus aparece; na norma actual, não.)
 - Próclise inicial ("Me parece") → "Parece-me".
 - Possessivo sem artigo ("meu livro") → "o meu livro".
 - "Isso" para tudo → distinguir **isto** (perto de quem fala, ou o que vem a seguir), **isso** (perto de quem ouve, ou o que se acabou de dizer) e **aquilo**.
