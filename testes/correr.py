@@ -67,8 +67,13 @@ def gerar(etiqueta, ids=None, sem_skill=False):
             continue
         texto = pedido if sem_skill else INSTRUCAO + pedido
         print(f"{i} [{registo}] a gerar…", flush=True)
-        r = subprocess.run([claude, "-p", texto, "--output-format", "text"],
-                           cwd=neutra, capture_output=True, text=True, encoding="utf-8", timeout=900)
+        cmd = [claude, "-p", texto, "--output-format", "text"]
+        if sem_skill:
+            # A skill está instalada globalmente e a descrição manda usá-la sempre que se
+            # escreve em português: sem bloquear a ferramenta, a linha de base usa-a na mesma.
+            cmd += ["--disallowedTools", "Skill"]
+        r = subprocess.run(cmd, cwd=neutra, capture_output=True, text=True,
+                           encoding="utf-8", errors="replace", timeout=900)
         if r.returncode != 0:
             print(f"   falhou: {r.stderr.strip()[:300]}")
             continue
@@ -82,7 +87,7 @@ def avaliar_uma(etiqueta):
     ficheiros = sorted(f for f in os.listdir(pasta) if f[:2].isdigit() and f.endswith(".md"))
     r = subprocess.run([sys.executable, "-I", localizar_verificador(), "--json"]
                        + [os.path.join(pasta, f) for f in ficheiros],
-                       capture_output=True, text=True, encoding="utf-8")
+                       capture_output=True, text=True, encoding="utf-8", errors="replace")
     dados = json.loads(r.stdout)
     registos = {i: reg for i, reg, _ in ler_pedidos()}
     linhas, tot = [], {"palavras": 0, "ERRO": 0, "AVISO": 0}
