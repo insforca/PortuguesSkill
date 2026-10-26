@@ -48,7 +48,7 @@ Regra geral: **na dúvida, cortar**. Metade destas expressões não precisa de s
 
 - **Regra de três.** A IA enumera sempre três adjectivos ou três exemplos. Usar dois, um ou quatro, conforme o caso. A tríade não é proibida: Antero usa-a com função retórica (ver `corpus/seculo-xix.md`). O vício está no automatismo.
 - **Parágrafos todos do mesmo tamanho.** Variar: um parágrafo de uma linha ao lado de outro de dez é normal em boa prosa.
-- **Frases todas curtas, ou todas médias.** O português culto alterna a frase longa, subordinada e bem pontuada (Vieira, Eça, Saramago à sua maneira) com a frase seca.
+- **Frases todas curtas, ou todas médias.** O português culto alterna a frase longa, subordinada e bem pontuada (Vieira, Eça, Saramago à sua maneira) com a frase seca. **Este é o sinal de IA mais forte e o menos visível.** Medido em 10 milhões de palavras do *Público*: frase média de **24 palavras**, com grande variação, e **1 em cada 5 frases com mais de 35 palavras**. Os textos gerados, com ou sem esta skill, ficavam nas 17 palavras e com menos de 3% de frases longas: frases arrumadas, todas do mesmo tamanho. Alvos para ensaio, crónica, texto académico e narração: **média entre 20 e 28 palavras**, e **pelo menos uma frase longa (35 ou mais palavras, bem articulada com vírgulas, ponto e vírgula ou subordinadas) em cada parágrafo de tamanho normal**, ao lado de frases curtas. Em e-mails, mensagens e diálogos, frases curtas são naturais.
 - **Abertura em funil** ("Desde tempos imemoriais…", "Num mundo cada vez mais…"). Entrar directamente no assunto.
 - **Fecho em resumo ou em moral.** Acabar na última ideia nova, numa imagem ou numa pergunta que fique, nunca a repetir o que já se disse.
 - **Paralelismo negativo** ("não é X, é Y", "não apenas X, mas também Y"): no máximo uma vez por texto. Ver a skill `paralelismo-negativo`.
@@ -82,6 +82,18 @@ Regra geral: **na dúvida, cortar**. Metade destas expressões não precisa de s
 ## 5. Concretude
 
 Um texto humano tem pormenores que só quem conhece o assunto poria lá: um nome, uma data, um número, um lugar, uma objecção concreta. Reutilizar os pormenores que o utilizador forneceu; se faltarem, pedi-los ou deixar a frase sóbria. **Nunca inventar** episódios, estatísticas ou citações para dar cor ao texto.
+
+### Cuidado com a sobre-correcção
+
+A regra da concretude, aplicada mecanicamente, cria tiques novos. A análise dos textos gerados com esta skill (`ferramentas/descobrir_tiques.py`, comparando com 10 milhões de palavras do *Público*) mostrou que se repetiam, de pedido para pedido:
+
+- a hora exacta (*às sete e vinte*, *às oito em ponto*);
+- o cheiro (*cheira a lixívia*, *cheira a café*);
+- a imprecisão calculada (*duas ou três*, *trinta e tantos*);
+- o objecto doméstico (*a cozinha*, *a janela*, *o saco*, *o termo de café*);
+- o advérbio de cena (*devagar*) e a frase com *ninguém* (*ninguém se lembra*, *que ninguém contradiz*).
+
+Cada um, sozinho, é bom. Repetidos em todos os textos, tornam-se uma assinatura. **Um pormenor concreto por parágrafo chega**, e o tipo de pormenor deve variar: um número, um nome, um gesto, uma frase dita, não sempre um cheiro e uma hora. Em textos curtos e funcionais (e-mails, requerimentos, mensagens), a concretude está nos dados do assunto, não em ambiente.
 
 ## 6. Teste final
 

@@ -4,7 +4,7 @@ description: >-
   Norma de escrita em português europeu (PT-PT) culto, com a ortografia ANTERIOR ao Acordo Ortográfico de 1990 (acção, óptimo, actual, director, Janeiro, pára, fim-de-semana), e sem marcas de texto gerado por IA. Usar SEMPRE que se escreva, reescreva, traduza ou reveja qualquer texto em português — ensaios, trabalhos académicos, teses, recensões, contos, novelas, romances, livros, cartas, e-mails formais e mensagens informais. Usar também por cima de skills calibradas para PT-BR (humanizar, paralelismo-negativo, better-portuguese, pesquisador-br): o léxico, a sintaxe e a ortografia desta skill prevalecem. Gatilhos — escrever em português, ensaio, trabalho académico, romance, novela, conto, carta, e-mail, rever texto, tirar cara de IA, converter para a ortografia antiga, desfazer o Acordo, pré-AO90.
 metadata:
   author: insforca
-  version: "1.5.0"
+  version: "1.6.0"
   license: MIT
   repository: https://github.com/insforca/PortuguesSkill
 ---
@@ -78,6 +78,14 @@ Para textos longos (capítulos, teses, livros), fazer as passagens 3 a 7 por sec
 - A tese surge cedo; cada parágrafo faz avançar o argumento e nenhum se limita a recapitulá-lo.
 - Voz própria, opinião assumida, digressão controlada: a tradição de Montaigne, António Sérgio, Eduardo Lourenço e Agustina.
 - A frase longa, bem articulada e bem pontuada é própria do português culto. Alterná-la com frases curtas; não picar tudo em frases de cinco palavras.
+
+## Comprimento das frases (vale para ensaio, crónica, académico e narração)
+
+Medido em 10 milhões de palavras do *Público*: frase média de 24 palavras e 1 em cada 5 frases com mais de 35. Os modelos de linguagem escrevem frases de 17 palavras, todas parecidas, e isso denuncia-os mais do que qualquer palavra. **Alvo: média entre 20 e 28 palavras, e pelo menos uma frase longa (35 palavras ou mais, articulada com vírgulas, ponto e vírgula ou orações subordinadas) por parágrafo**, ao lado de frases curtas. O verificador mede isto. Em e-mails, mensagens e diálogos, frases curtas são naturais.
+
+## Concretude sem fórmula
+
+Um pormenor concreto por parágrafo chega, e o tipo deve variar (um número, um nome, um gesto, uma frase dita). Não repetir de texto para texto a hora exacta, o cheiro, o objecto de cozinha ou o *duas ou três*: a análise dos textos gerados mostrou que se tinham tornado tiques da própria skill (ver `references/anti-ia-pt-pt.md`).
 
 ## Ficção (contos, novelas, romances)
 

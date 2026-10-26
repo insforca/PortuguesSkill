@@ -1,11 +1,12 @@
 """Bateria de testes da skill: gera os textos com o Claude Code e avalia-os com o verificador.
 
 Uso:
-  python correr.py gerar <etiqueta> [--ids 01,02] [--sem-skill]
+  python correr.py gerar <etiqueta> [--ids 01,02] [--sem-skill] [--conjunto pedidos_dificeis.tsv]
       Gera um texto por pedido de pedidos.tsv com `claude -p` e guarda-os em
       resultados/<etiqueta>/NN.md. Corre numa pasta temporária neutra, para que
       memórias ou CLAUDE.md do projecto não influenciem o resultado.
-      Com --sem-skill, o pedido não menciona a skill (linha de base).
+      Com --sem-skill, o pedido não menciona a skill e a ferramenta Skill é bloqueada
+      (linha de base). Com --conjunto, usa outro ficheiro de pedidos (por omissão, pedidos.tsv).
 
   python correr.py avaliar <etiqueta> [<etiqueta2> ...]
       Corre o verificador sobre resultados/<etiqueta>/ e escreve a tabela de
@@ -40,9 +41,12 @@ def localizar_verificador():
     sys.exit("verificar.py não encontrado")
 
 
-def ler_pedidos():
+CONJUNTOS = ("pedidos.tsv", "pedidos_dificeis.tsv")
+
+
+def ler_pedidos(conjunto="pedidos.tsv"):
     pedidos = []
-    with open(os.path.join(AQUI, "pedidos.tsv"), encoding="utf-8") as f:
+    with open(os.path.join(AQUI, conjunto), encoding="utf-8") as f:
         for l in f:
             if l.startswith("#") or not l.strip():
                 continue
@@ -51,14 +55,14 @@ def ler_pedidos():
     return pedidos
 
 
-def gerar(etiqueta, ids=None, sem_skill=False):
+def gerar(etiqueta, ids=None, sem_skill=False, conjunto="pedidos.tsv"):
     destino = os.path.join(RESULTADOS, etiqueta)
     os.makedirs(destino, exist_ok=True)
     claude = shutil.which("claude")
     if not claude:
         sys.exit("comando `claude` não encontrado")
     neutra = tempfile.mkdtemp(prefix="pt-testes-")
-    for i, registo, pedido in ler_pedidos():
+    for i, registo, pedido in ler_pedidos(conjunto):
         if ids and i not in ids:
             continue
         saida = os.path.join(destino, f"{i}.md")
@@ -84,16 +88,16 @@ def gerar(etiqueta, ids=None, sem_skill=False):
 
 def avaliar_uma(etiqueta):
     pasta = os.path.join(RESULTADOS, etiqueta)
-    ficheiros = sorted(f for f in os.listdir(pasta) if f[:2].isdigit() and f.endswith(".md"))
+    ficheiros = sorted(f for f in os.listdir(pasta) if f.endswith(".md") and f != "avaliacao.md")
     r = subprocess.run([sys.executable, "-I", localizar_verificador(), "--json"]
                        + [os.path.join(pasta, f) for f in ficheiros],
                        capture_output=True, text=True, encoding="utf-8", errors="replace")
     dados = json.loads(r.stdout)
-    registos = {i: reg for i, reg, _ in ler_pedidos()}
+    registos = {i: reg for c in CONJUNTOS for i, reg, _ in ler_pedidos(c)}
     linhas, tot = [], {"palavras": 0, "ERRO": 0, "AVISO": 0}
     categorias = {}
     for caminho, d in dados.items():
-        i = os.path.basename(caminho)[:2]
+        i = os.path.splitext(os.path.basename(caminho))[0]
         tot["palavras"] += d["palavras"]
         tot["ERRO"] += d["resumo"]["ERRO"]
         tot["AVISO"] += d["resumo"]["AVISO"]
@@ -125,7 +129,8 @@ def main(argv):
         ids = None
         if "--ids" in argv:
             ids = set(argv[argv.index("--ids") + 1].split(","))
-        gerar(argv[1], ids, "--sem-skill" in argv)
+        conjunto = argv[argv.index("--conjunto") + 1] if "--conjunto" in argv else "pedidos.tsv"
+        gerar(argv[1], ids, "--sem-skill" in argv, conjunto)
         return 0
     etiquetas = [a for a in argv[1:] if not a.startswith("--")]
     print("| etiqueta | textos | palavras | erros | erros/1000 | avisos | avisos/1000 |")

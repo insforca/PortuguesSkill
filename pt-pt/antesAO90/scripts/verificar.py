@@ -33,6 +33,8 @@ MESES = r"janeiro|fevereiro|março|abril|maio|junho|julho|agosto|setembro|outubr
 # acento em ditongo aberto antes de 1990 (idéia, apóia), trema (freqüente).
 # Palavras raras sem estes sinais e ausentes do dicionário pré-AO90 ficam como NOTA.
 MARCA_BR = re.compile(r"[êô](?=[mn])|[éó]i(?=a|as|o|os)\b|ü")
+ABREVIATURAS = re.compile(r"\b(Sr|Sra|Srs|Dr|Dra|Drs|Prof|Profª|Exmo|Exma|Ex|V|D|n|art|p|pp|vol|cf|etc|S)\.(ª|º|as|os)?"
+                          r"(?=\s+\S)")
 ESTAR = (r"estar|estou|estás|está|estamos|estais|estão|estava|estavas|estávamos|estavam|"
          r"esteve|estive|estivemos|estiveram|estaria|estariam|estará|estarão|estivesse|estivessem|"
          r"esteja|estejam|estive|estiveste")
@@ -210,6 +212,19 @@ class Verificador:
             if cv < 0.35:
                 self._add(res, texto, "AVISO", "ritmo", 0, 0,
                           f"frases de tamanho uniforme (variação {cv:.2f}); alternar longas e curtas")
+        # Comprimento das frases em prosa corrida (não em diálogo nem em listas).
+        # Referência: CETEMPúblico, média de 24 palavras e 19% de frases com mais de 35.
+        prosa = "\n".join(p for p in paragrafos if not p.lstrip().startswith("—"))
+        prosa = ABREVIATURAS.sub(lambda m: m.group(0).replace(".", "§"), prosa)
+        frases_prosa = [len(PALAVRA.findall(f)) for f in re.split(r"(?<=[.!?…])\s+", prosa)
+                        if len(PALAVRA.findall(f)) > 2]
+        if sum(frases_prosa) >= 150 and len(frases_prosa) >= 6:
+            media = statistics.mean(frases_prosa)
+            longas = sum(1 for x in frases_prosa if x >= 35) / len(frases_prosa) * 100
+            if media < 19 or longas < 8:
+                self._add(res, texto, "AVISO", "comprimento das frases", 0, 0,
+                          f"frase média de {media:.0f} palavras e {longas:.0f}% de frases com 35 ou mais "
+                          f"(no Público: 24 e 19%); juntar frases e incluir pelo menos uma longa por parágrafo")
         triades = re.findall(r"\b\w+, \w+ e \w+\b", texto)
         if len(triades) > max(2, palavras // 200):
             self._add(res, texto, "AVISO", "tríades", 0, 0, f"{len(triades)} enumerações de três elementos")

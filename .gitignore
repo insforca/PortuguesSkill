@@ -2,3 +2,4 @@ pt-pt/antesAO90/references/corpus/privado/
 pt-pt/antesAO90/dados/dicionarios/
 __pycache__/
 testes/log_*.txt
+.cache/
