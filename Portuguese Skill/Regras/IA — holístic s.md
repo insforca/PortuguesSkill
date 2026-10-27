@@ -5,11 +5,11 @@ padrao: '\bholístic[oa]s?\b'
 limite: 0
 sugestao: 'cortar'
 nivel: 'aviso'
-estado: 'presumida'
+estado: 'medida'
 grupo: 'base'
 ordem: 21
 fenomeno: '[[Marcas de IA]]'
-evidencia: []
+evidencia: ["[[Corpora — IA — holístic s]]"]
 ---
 
 # IA — holístic s

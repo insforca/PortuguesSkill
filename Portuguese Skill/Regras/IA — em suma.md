@@ -5,11 +5,11 @@ padrao: '\b(em suma|em resumo|em conclusão|em síntese)\b'
 limite: 0
 sugestao: 'concluir sem anunciar'
 nivel: 'aviso'
-estado: 'presumida'
+estado: 'medida'
 grupo: 'base'
 ordem: 6
 fenomeno: '[[Marcas de IA]]'
-evidencia: []
+evidencia: ["[[Corpora — IA — em suma]]"]
 ---
 
 # IA — em suma

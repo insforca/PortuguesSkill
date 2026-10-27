@@ -9,7 +9,7 @@ estado: 'presumida'
 grupo: 'base'
 ordem: 22
 fenomeno: '[[Marcas de IA]]'
-evidencia: []
+evidencia: ["[[Corpora — IA — robust s]]"]
 ---
 
 # IA — robust s

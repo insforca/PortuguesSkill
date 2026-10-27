@@ -5,11 +5,11 @@ padrao: '\b(um|uma) verdadeir[oa] testemunho\b'
 limite: 0
 sugestao: 'prova de, mostra que'
 nivel: 'aviso'
-estado: 'presumida'
+estado: 'medida'
 grupo: 'base'
 ordem: 24
 fenomeno: '[[Marcas de IA]]'
-evidencia: []
+evidencia: ["[[Corpora — IA — um verdadeir testemunho]]"]
 ---
 
 # IA — um verdadeir testemunho

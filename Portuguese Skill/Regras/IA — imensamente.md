@@ -5,11 +5,11 @@ padrao: '\bimensamente\b'
 limite: 0
 sugestao: 'muito — ou cortar'
 nivel: 'aviso'
-estado: 'presumida'
+estado: 'medida'
 grupo: 'base'
 ordem: 38
 fenomeno: '[[Marcas de IA]]'
-evidencia: []
+evidencia: ["[[Corpora — IA — imensamente]]"]
 ---
 
 # IA — imensamente

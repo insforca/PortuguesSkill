@@ -6,9 +6,9 @@ alternativa: 'Janeiro, Fevereiro…'
 nivel: 'erro'
 gerado: false
 implementacao: 'scripts/verificar.py'
-estado: 'presumida'
+estado: 'medida'
 fenomeno: '[[Grafia AO90]]'
-evidencia: []
+evidencia: ["[[Corpora — OR — meses com minúscula]]"]
 ---
 
 # OR — meses com minúscula

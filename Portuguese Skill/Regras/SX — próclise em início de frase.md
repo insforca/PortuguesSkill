@@ -6,9 +6,9 @@ alternativa: 'ênclise: «Disse-me»'
 nivel: 'erro'
 gerado: false
 implementacao: 'scripts/verificar.py'
-estado: 'presumida'
+estado: 'medida'
 fenomeno: '[[Colocação pronominal]]'
-evidencia: []
+evidencia: ["[[Corpora — SX — próclise em início de frase]]"]
 ---
 
 # SX — próclise em início de frase

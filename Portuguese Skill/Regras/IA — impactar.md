@@ -5,11 +5,11 @@ padrao: '\bimpacta(r|m|ndo|do|da)?\b'
 limite: 0
 sugestao: 'afectar, ter efeito em'
 nivel: 'aviso'
-estado: 'presumida'
+estado: 'medida'
 grupo: 'base'
 ordem: 14
 fenomeno: '[[Marcas de IA]]'
-evidencia: []
+evidencia: ["[[Corpora — IA — impactar]]"]
 ---
 
 # IA — impactar

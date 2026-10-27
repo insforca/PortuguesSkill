@@ -9,7 +9,7 @@ estado: 'presumida'
 grupo: 'base'
 ordem: 13
 fenomeno: '[[Marcas de IA]]'
-evidencia: []
+evidencia: ["[[Corpora — IA — desafios]]"]
 ---
 
 # IA — desafios

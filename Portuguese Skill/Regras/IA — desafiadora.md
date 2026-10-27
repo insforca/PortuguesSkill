@@ -5,11 +5,11 @@ padrao: '\bdesafiador(a|es|as)?\b'
 limite: 0
 sugestao: 'difícil, exigente'
 nivel: 'aviso'
-estado: 'presumida'
+estado: 'medida'
 grupo: 'base'
 ordem: 12
 fenomeno: '[[Marcas de IA]]'
-evidencia: []
+evidencia: ["[[Corpora — IA — desafiadora]]"]
 ---
 
 # IA — desafiadora

@@ -9,7 +9,7 @@ estado: 'presumida'
 grupo: 'base'
 ordem: 20
 fenomeno: '[[Marcas de IA]]'
-evidencia: []
+evidencia: ["[[Corpora — IA — sinergias]]"]
 ---
 
 # IA — sinergias

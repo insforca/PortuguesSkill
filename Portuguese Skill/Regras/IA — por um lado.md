@@ -9,7 +9,7 @@ estado: 'presumida'
 grupo: 'base'
 ordem: 40
 fenomeno: '[[Marcas de IA]]'
-evidencia: []
+evidencia: ["[[Corpora — IA — por um lado]]"]
 ---
 
 # IA — por um lado

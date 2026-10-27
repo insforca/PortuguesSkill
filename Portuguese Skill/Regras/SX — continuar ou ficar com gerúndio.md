@@ -6,9 +6,9 @@ alternativa: 'continuar a / ficar a + infinitivo'
 nivel: 'aviso'
 gerado: false
 implementacao: 'scripts/verificar.py'
-estado: 'presumida'
+estado: 'medida'
 fenomeno: '[[Gerúndio]]'
-evidencia: []
+evidencia: ["[[Corpora — SX — continuar ou ficar com gerúndio]]"]
 ---
 
 # SX — continuar ou ficar com gerúndio

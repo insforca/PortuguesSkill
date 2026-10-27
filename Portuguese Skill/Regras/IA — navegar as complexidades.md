@@ -5,11 +5,11 @@ padrao: '\bnavega(r|ndo) (as|pelas|nas) complexidades\b'
 limite: 0
 sugestao: 'cortar'
 nivel: 'aviso'
-estado: 'presumida'
+estado: 'medida'
 grupo: 'base'
 ordem: 18
 fenomeno: '[[Marcas de IA]]'
-evidencia: []
+evidencia: ["[[Corpora — IA — navegar as complexidades]]"]
 ---
 
 # IA — navegar as complexidades

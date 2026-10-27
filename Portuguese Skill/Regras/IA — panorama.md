@@ -9,7 +9,7 @@ estado: 'presumida'
 grupo: 'base'
 ordem: 26
 fenomeno: '[[Marcas de IA]]'
-evidencia: []
+evidencia: ["[[Corpora — IA — panorama]]"]
 ---
 
 # IA — panorama

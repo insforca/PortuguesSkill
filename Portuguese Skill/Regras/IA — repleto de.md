@@ -9,7 +9,7 @@ estado: 'presumida'
 grupo: 'base'
 ordem: 39
 fenomeno: '[[Marcas de IA]]'
-evidencia: []
+evidencia: ["[[Corpora — IA — repleto de]]"]
 ---
 
 # IA — repleto de

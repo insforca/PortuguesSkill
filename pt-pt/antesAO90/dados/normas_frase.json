@@ -34,16 +34,16 @@
   "des": "noticia"
  },
  "discurso": {
-  "frases": 227795,
-  "media": 28.9,
-  "desvio": 24.0,
-  "pct_35_ou_mais": 30.6
+  "frases": 199344,
+  "media": 28.5,
+  "desvio": 22.5,
+  "pct_35_ou_mais": 30.2
  },
  "oral": {
-  "frases": 26013,
-  "media": 14.9,
-  "desvio": 11.2,
-  "pct_35_ou_mais": 7.1
+  "frases": 18707,
+  "media": 15.7,
+  "desvio": 11.6,
+  "pct_35_ou_mais": 8.2
  },
  "_fonte_parlamento": "Debates parlamentares 1945-2011 (debates.parlamento.pt), amostra de 6 sessões/ano"
 }

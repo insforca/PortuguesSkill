@@ -11,7 +11,7 @@
 \badicionalmente\b	0	além de que, acresce que
 \bou seja\b	1	isto é, quer dizer — ou cortar
 \bfundamenta(l|is)\b	1	central, importante — ou cortar
-\bjornadas?\b	0	percurso, caminho
+\b(uma|esta|essa|nossa|sua|minha|tua|longa|verdadeira) jornada\b	0	percurso, caminho
 \bdesafiador(a|es|as)?\b	0	difícil, exigente
 \bdesafios?\b	1	problema, dificuldade, obstáculo
 \bimpacta(r|m|ndo|do|da)?\b	0	afectar, ter efeito em

@@ -5,11 +5,11 @@ padrao: '\bnão (é|são|se trata de) (apenas|só|somente)\b'
 limite: 1
 sugestao: 'paralelismo negativo: no máximo um por texto'
 nivel: 'aviso'
-estado: 'presumida'
+estado: 'medida'
 grupo: 'base'
 ordem: 29
 fenomeno: '[[Marcas de IA]]'
-evidencia: []
+evidencia: ["[[Corpora — IA — não é apenas]]"]
 ---
 
 # IA — não é apenas

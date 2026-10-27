@@ -5,11 +5,11 @@ padrao: '\bespero que (isto|isso|esta|este) (ajude|seja útil)\b'
 limite: 0
 sugestao: 'comentário de assistente: retirar do texto'
 nivel: 'aviso'
-estado: 'presumida'
+estado: 'medida'
 grupo: 'base'
 ordem: 31
 fenomeno: '[[Marcas de IA]]'
-evidencia: []
+evidencia: ["[[Corpora — IA — espero que isto ajude]]"]
 ---
 
 # IA — espero que isto ajude

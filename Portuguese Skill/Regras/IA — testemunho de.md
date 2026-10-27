@@ -9,7 +9,7 @@ estado: 'presumida'
 grupo: 'base'
 ordem: 25
 fenomeno: '[[Marcas de IA]]'
-evidencia: []
+evidencia: ["[[Corpora — IA — testemunho de]]"]
 ---
 
 # IA — testemunho de

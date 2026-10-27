@@ -5,11 +5,11 @@ padrao: '\bespero que (esta|a minha|a) (mensagem|carta) o?a? ?encontre bem\b'
 limite: 0
 sugestao: 'fórmula de abertura vazia: começar pelo assunto'
 nivel: 'aviso'
-estado: 'presumida'
+estado: 'medida'
 grupo: 'base'
 ordem: 35
 fenomeno: '[[Marcas de IA]]'
-evidencia: []
+evidencia: ["[[Corpora — IA — espero que esta mensagem o a encontre bem]]"]
 ---
 
 # IA — espero que esta mensagem o a encontre bem

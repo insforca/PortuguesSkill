@@ -5,11 +5,11 @@ padrao: 'trilha sonora'
 alternativa: 'banda sonora'
 nivel: 'erro'
 nota:
-estado: 'presumida'
+estado: 'medida'
 grupo: 'base'
 ordem: 48
 fenomeno: '[[Léxico PT-BR]]'
-evidencia: []
+evidencia: ["[[Corpora — BR — trilha sonora]]"]
 ---
 
 # BR — trilha sonora

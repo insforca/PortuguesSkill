@@ -9,7 +9,7 @@ estado: 'presumida'
 grupo: 'base'
 ordem: 17
 fenomeno: '[[Marcas de IA]]'
-evidencia: []
+evidencia: ["[[Corpora — IA — tapeçaria]]"]
 ---
 
 # IA — tapeçaria

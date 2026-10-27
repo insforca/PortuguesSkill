@@ -5,11 +5,11 @@ padrao: '\bem constante evolução\b'
 limite: 0
 sugestao: 'cortar'
 nivel: 'aviso'
-estado: 'presumida'
+estado: 'medida'
 grupo: 'base'
 ordem: 23
 fenomeno: '[[Marcas de IA]]'
-evidencia: []
+evidencia: ["[[Corpora — IA — em constante evolução]]"]
 ---
 
 # IA — em constante evolução

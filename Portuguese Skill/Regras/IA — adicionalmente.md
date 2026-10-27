@@ -5,11 +5,11 @@ padrao: '\badicionalmente\b'
 limite: 0
 sugestao: 'além de que, acresce que'
 nivel: 'aviso'
-estado: 'presumida'
+estado: 'medida'
 grupo: 'base'
 ordem: 8
 fenomeno: '[[Marcas de IA]]'
-evidencia: []
+evidencia: ["[[Corpora — IA — adicionalmente]]"]
 ---
 
 # IA — adicionalmente

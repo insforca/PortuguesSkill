@@ -5,11 +5,11 @@ padrao: 'a gente'
 alternativa: 'nós'
 nivel: 'aviso'
 nota: 'só admissível em fala de personagem'
-estado: 'presumida'
+estado: 'contestada'
 grupo: 'base'
 ordem: 73
 fenomeno: '[[Fala informal]]'
-evidencia: []
+evidencia: ["[[Corpora — BR — a gente]]"]
 ---
 
 # BR — a gente

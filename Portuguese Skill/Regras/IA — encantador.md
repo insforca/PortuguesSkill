@@ -9,7 +9,7 @@ estado: 'presumida'
 grupo: 'base'
 ordem: 43
 fenomeno: '[[Marcas de IA]]'
-evidencia: []
+evidencia: ["[[Corpora — IA — encantador]]"]
 ---
 
 # IA — encantador

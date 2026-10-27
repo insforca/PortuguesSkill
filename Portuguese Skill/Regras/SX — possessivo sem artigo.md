@@ -6,9 +6,9 @@ alternativa: '«O meu…», «A minha…»'
 nivel: 'aviso'
 gerado: false
 implementacao: 'scripts/verificar.py'
-estado: 'presumida'
+estado: 'medida'
 fenomeno: '[[Colocação pronominal]]'
-evidencia: []
+evidencia: ["[[Corpora — SX — possessivo sem artigo]]"]
 ---
 
 # SX — possessivo sem artigo

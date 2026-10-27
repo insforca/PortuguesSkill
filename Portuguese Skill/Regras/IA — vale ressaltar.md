@@ -5,11 +5,11 @@ padrao: '\bvale (ressaltar|destacar|lembrar|a pena destacar)\b'
 limite: 0
 sugestao: 'cortar'
 nivel: 'aviso'
-estado: 'presumida'
+estado: 'medida'
 grupo: 'base'
 ordem: 5
 fenomeno: '[[Marcas de IA]]'
-evidencia: []
+evidencia: ["[[Corpora — IA — vale ressaltar]]"]
 ---
 
 # IA — vale ressaltar

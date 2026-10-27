@@ -5,11 +5,11 @@ padrao: '\bcrucia(l|is)\b'
 limite: 0
 sugestao: 'decisivo, central — ou cortar'
 nivel: 'aviso'
-estado: 'presumida'
+estado: 'medida'
 grupo: 'base'
 ordem: 0
 fenomeno: '[[Marcas de IA]]'
-evidencia: []
+evidencia: ["[[Corpora — IA — crucial]]"]
 ---
 
 # IA — crucial

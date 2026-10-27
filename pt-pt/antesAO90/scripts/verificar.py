@@ -152,7 +152,9 @@ class Verificador:
         for m in re.finditer(r"\b(primavera|verão|outono|inverno)\b", texto):
             self._add(res, texto, "AVISO", "maiúsculas", m.start(), m.end(), "estação do ano: com maiúscula (Primavera, Verão…) na grafia pré-AO90")
         hifens = {r"fim de semana": "fim-de-semana", r"fins de semana": "fins-de-semana",
-                  r"(hei|hás|há|havemos|heis|hão) de": None, r"cor de rosa": "cor-de-rosa",
+                  # só antes de infinitivo: «há-de ser», mas «há de tudo», «há de facto» (verbo haver + de)
+                  r"(hei|hás|há|havemos|heis|hão) de(?= \w+(?:ar|er|ir|or|pôr)\b)": None,
+                  r"cor de rosa": "cor-de-rosa",
                   r"para-quedas": "pára-quedas", r"paraquedas": "pára-quedas"}
         for pad, sug in hifens.items():
             for m in re.finditer(r"(?<![\w-])" + pad + r"(?![\w-])", texto, re.IGNORECASE):
@@ -178,7 +180,8 @@ class Verificador:
         for m in re.finditer(r"(?:^|(?<=[.!?]\s)|(?<=\n))(Meu|Minha|Meus|Minhas|Seu|Sua|Seus|Suas|Nosso|Nossa)\s+(?!caro|cara|querid|Deus|senhor|senhora|amig)[a-zà-ÿ]+", texto):
             self._add(res, texto, "AVISO", "artigo", m.start(), m.end(),
                       "possessivo sem artigo: em PT-PT, «O meu…», «A minha…»")
-        for m in re.finditer(r"\b(tem|tens|temos|têm|tinha|tinham|tive|teve|terá|terão|ter)\s+que\s+[a-zà-ÿ]+(r|r-se)\b", texto, re.IGNORECASE):
+        # «ter que ver (com)» é expressão portuguesa correcta e fica de fora
+        for m in re.finditer(r"\b(tem|tens|temos|têm|tinha|tinham|tive|teve|terá|terão|ter)\s+que\s+(?!ver\b)[a-zà-ÿ]+(r|r-se)\b", texto, re.IGNORECASE):
             self._add(res, texto, "AVISO", "regência", m.start(), m.end(), "preferir «ter de»")
 
     def estilo(self, texto, res):

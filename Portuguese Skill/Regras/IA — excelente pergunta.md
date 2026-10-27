@@ -5,11 +5,11 @@ padrao: '\b(excelente|óptima|ótima|boa) pergunta\b'
 limite: 0
 sugestao: 'comentário de assistente: retirar'
 nivel: 'aviso'
-estado: 'presumida'
+estado: 'medida'
 grupo: 'base'
 ordem: 32
 fenomeno: '[[Marcas de IA]]'
-evidencia: []
+evidencia: ["[[Corpora — IA — excelente pergunta]]"]
 ---
 
 # IA — excelente pergunta

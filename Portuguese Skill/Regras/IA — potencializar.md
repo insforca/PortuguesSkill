@@ -9,7 +9,7 @@ estado: 'presumida'
 grupo: 'base'
 ordem: 15
 fenomeno: '[[Marcas de IA]]'
-evidencia: []
+evidencia: ["[[Corpora — IA — potencializar]]"]
 ---
 
 # IA — potencializar

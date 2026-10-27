@@ -9,7 +9,7 @@ estado: 'presumida'
 grupo: 'base'
 ordem: 19
 fenomeno: '[[Marcas de IA]]'
-evidencia: []
+evidencia: ["[[Corpora — IA — ecossistemas]]"]
 ---
 
 # IA — ecossistemas

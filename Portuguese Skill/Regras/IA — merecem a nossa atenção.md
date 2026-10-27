@@ -5,11 +5,11 @@ padrao: '\bmerece(m)? (a )?(nossa )?(atenção|reflexão)\b'
 limite: 0
 sugestao: 'dizer o que se propõe'
 nivel: 'aviso'
-estado: 'presumida'
+estado: 'medida'
 grupo: 'base'
 ordem: 44
 fenomeno: '[[Marcas de IA]]'
-evidencia: []
+evidencia: ["[[Corpora — IA — merecem a nossa atenção]]"]
 ---
 
 # IA — merecem a nossa atenção

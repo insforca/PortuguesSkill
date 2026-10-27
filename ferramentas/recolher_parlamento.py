@@ -118,20 +118,44 @@ def recolher(por_ano=6, de=1945, ate=2011):
 
 
 # --- preparação -------------------------------------------------------------------------
-ORADOR = re.compile(r"^(?:O|A) (?:Sr\.ª?|Sra\.|Orador|Oradora|Presidente)[^:\n]{0,80}:\s*[—–-]?\s*", re.M)
+ORADOR = re.compile(r"^((?:O|A) (?:Sr\.ª?|Sra\.|Orador|Oradora|Presidente)[^:\n]{0,80}):\s*[—–-]?\s*", re.M)
 RUIDO = re.compile(r"^(Página \d+|DIÁRIO D[AE] .*|\d+ DIÁRIO .*|.*SÉRIE.*NÚMERO.*|Aplausos.*|Risos\.?|"
                    r"Vozes.*|Protestos.*|Pausa\.?)$", re.M)
+# cabeçalhos de página que o OCR cola a meio do texto: «11 | I Série - Número: 002 | 6 de Novembro de 2009»
+CABECALHO = re.compile(r"\d+\s*\|\s*I+ Série\s*-\s*Número:?\s*\d+\s*\|\s*\d+ de \w+ de \d{4}", re.I)
+# quem fala em nome da Mesa (presidência, secretários): sobretudo procedimento
+MESA = re.compile(r"^(?:O|A) (?:Sr\.ª?|Sra\.) (?:Presidente|Vice-Presidente|Secretári[oa])\s*(?:\([^)]*\))?\s*$")
+# procedimento e votações
+PROCEDIMENTO = re.compile(r"\b(submetid[oa]s? à votação|vamos (?:votar|proceder à votação)|é o seguinte:|"
+                          r"votos a favor d|deu entrada na Mesa|vai ser lid[oa]|está aberta a sessão|"
+                          r"está encerrada a sessão|eram \d+ horas|faltam \d+ minutos)", re.I)
+LEGAL = re.compile(r"\b(artigo|alínea|n\.º|parágrafo|inciso|base [IVXL]+)\b", re.I)
 
 
 def intervencoes(texto):
-    texto = RUIDO.sub("", texto)
+    """Devolve (orador, texto) de cada intervenção."""
+    texto = CABECALHO.sub(" ", RUIDO.sub("", texto))
     partes = ORADOR.split(texto)
-    for p in partes[1:]:
+    for orador, p in zip(partes[1::2], partes[2::2]):
         p = re.sub(r"\(O orador não reviu\.?\)|\(A oradora não reviu\.?\)", "", p)
         p = re.sub(r"-\n(\w)", r"\1", p)          # palavras cortadas no fim da linha
         p = " ".join(p.split())
         if len(p.split()) >= 5:
-            yield p
+            yield orador, p
+
+
+def motivo_rejeicao(orador, p, palavras):
+    """None se a intervenção serve; senão, o motivo (para o resumo)."""
+    if MESA.match(orador.strip()):
+        return "mesa"
+    if PROCEDIMENTO.search(p):
+        return "procedimento"
+    if "....." in p or LEGAL.findall(p) and len(LEGAL.findall(p)) / max(len(palavras), 1) > 0.015:
+        return "articulado"
+    letras = sum(c.isalpha() for c in p)
+    if letras and sum(c.isdigit() for c in p) / letras > 0.05:
+        return "numeros"
+    return None
 
 
 def preparar():
@@ -146,7 +170,7 @@ def preparar():
         return cache[w]
 
     os.makedirs(SAIDA, exist_ok=True)
-    resumo, rejeitadas = {}, 0
+    resumo, rejeitadas = {}, {"ocr": 0, "mesa": 0, "procedimento": 0, "articulado": 0, "numeros": 0}
     with open(os.path.join(SAIDA, "parl_discurso.txt"), "w", encoding="utf-8", newline="\n") as fd, \
             open(os.path.join(SAIDA, "parl_espontaneo.txt"), "w", encoding="utf-8", newline="\n") as fe:
         for f in sorted(os.listdir(CACHE)):
@@ -154,13 +178,17 @@ def preparar():
                 continue
             m = re.search(r"(\d{4})-\d{2}-\d{2}", f)
             ano, serie = m.group(1), f.split("_")[1]
-            for p in intervencoes(open(os.path.join(CACHE, f), encoding="utf-8").read()):
+            for orador, p in intervencoes(open(os.path.join(CACHE, f), encoding="utf-8").read()):
                 palavras = re.findall(r"[a-zà-ÿ]+", p)
                 if not palavras:
                     continue
+                motivo = motivo_rejeicao(orador, p, palavras)
+                if motivo:
+                    rejeitadas[motivo] += 1
+                    continue
                 desconhecidas = sum(1 for w in palavras if len(w) > 2 and not conhecida(w))
                 if desconhecidas / len(palavras) > 0.12:  # OCR demasiado estragado
-                    rejeitadas += 1
+                    rejeitadas["ocr"] += 1
                     continue
                 tipo = "discurso" if len(palavras) >= 150 else "espontaneo" if len(palavras) <= 60 else None
                 if not tipo:
@@ -169,7 +197,7 @@ def preparar():
                 (fd if tipo == "discurso" else fe).write(f"## {ano} {serie}\n" + "\n".join(frases) + "\n\n")
                 dec = ano[:3] + "0"
                 resumo.setdefault(dec, {"discurso": 0, "espontaneo": 0})[tipo] += 1
-    resumo["_rejeitadas_ocr"] = rejeitadas
+    resumo["_rejeitadas"] = rejeitadas
     json.dump(resumo, open(os.path.join(SAIDA, "parl_resumo.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(json.dumps(resumo, ensure_ascii=False, indent=1))
 

@@ -5,11 +5,11 @@ padrao: '\bdesempenha(m|r)? um papel\b'
 limite: 0
 sugestao: 'conta, pesa, está no centro de'
 nivel: 'aviso'
-estado: 'presumida'
+estado: 'medida'
 grupo: 'base'
 ordem: 1
 fenomeno: '[[Marcas de IA]]'
-evidencia: []
+evidencia: ["[[Corpora — IA — desempenham um papel]]"]
 ---
 
 # IA — desempenham um papel

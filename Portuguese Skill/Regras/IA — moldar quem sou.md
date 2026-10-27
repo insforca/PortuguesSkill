@@ -5,11 +5,11 @@ padrao: '\bmoldar quem (sou|somos)\b'
 limite: 0
 sugestao: 'cortar'
 nivel: 'aviso'
-estado: 'presumida'
+estado: 'medida'
 grupo: 'base'
 ordem: 45
 fenomeno: '[[Marcas de IA]]'
-evidencia: []
+evidencia: ["[[Corpora — IA — moldar quem sou]]"]
 ---
 
 # IA — moldar quem sou

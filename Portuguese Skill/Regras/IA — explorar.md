@@ -9,7 +9,7 @@ estado: 'presumida'
 grupo: 'base'
 ordem: 28
 fenomeno: '[[Marcas de IA]]'
-evidencia: []
+evidencia: ["[[Corpora — IA — explorar]]"]
 ---
 
 # IA — explorar
