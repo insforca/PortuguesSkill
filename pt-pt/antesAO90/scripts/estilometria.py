@@ -1,21 +1,25 @@
-"""Estilometria: quão perto está um texto da prosa portuguesa (Público) ou brasileira (Folha)?
+"""Estilometria: quão perto está um texto da prosa portuguesa ou da brasileira?
 
 Usa o Delta de Burrows sobre palavras gramaticais, pontuação, comprimento das frases e
 colocação dos pronomes. Não depende de nenhuma lista de tiques: compara o perfil do texto
-com o perfil médio de milhares de excertos reais de imprensa.
+com o perfil médio de milhares de excertos reais.
+
+Perfil de referência: Público vs Folha de S. Paulo, 1991-1998 (imprensa). Foi testado também
+um perfil literário (prosa portuguesa vs brasileira de 1840-1920, Project Gutenberg), mas não
+distingue as variedades: no século XIX a prosa culta dos dois países era quase igual, e o que
+separa os textos são manias de autor. Por isso não é usado.
 
 Uso:
-  python estilometria.py texto.md [outro.md ...]        (relatório por texto)
-  python estilometria.py --pasta resultados/v1.5         (média de uma pasta de textos)
-  python estilometria.py --gerar-perfil pt.txt br.txt    (para quem mantém a skill)
+  python estilometria.py texto.md [outro.md ...]
+  python estilometria.py --pasta resultados/v1.5
+  python estilometria.py --gerar-perfil pt.txt br.txt   (manutenção)
 
 Leitura:
-  Delta PT / Delta BR  distância ao perfil do Público / da Folha (menor = mais perto)
+  Delta PT / Delta BR  distância ao perfil português / brasileiro (menor = mais perto)
   Margem PT            Delta BR − Delta PT (positivo = mais perto do português europeu)
-  Traços desviantes    os traços em que o texto mais se afasta do Público
+  Traços desviantes    os traços em que o texto mais se afasta do perfil português
 
-Limites: o perfil de referência é jornalístico (1991-1998); ficção, cartas e diálogos
-afastam-se dele por natureza. Compare versões entre si com os mesmos pedidos, em vez de
+Limites: o perfil é jornalístico; ficção, cartas e diálogos afastam-se dele por natureza. Compare versões entre si com os mesmos pedidos, em vez de
 ler os números absolutos. Textos com menos de 150 palavras dão medidas pouco estáveis.
 """
 import json
@@ -26,7 +30,7 @@ import statistics
 import sys
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
-PERFIL = os.path.join(AQUI, "..", "dados", "perfil_estilometrico.json")
+PERFIS = {"imprensa": os.path.join(AQUI, "..", "dados", "perfil_estilometrico.json")}
 
 GRAMATICAIS = """o a os as um uma uns umas de do da dos das em no na nos nas num numa por pelo pela pelos
 pelas para com sem sobre entre até desde contra ao à aos às que se não mais mas ou e nem como quando
@@ -86,10 +90,13 @@ def excertos(caminho, tamanho=250, maximo=6000):
 N_TRACOS = 30  # só os traços que mais separam PT de BR; os restantes acrescentam ruído
 
 
-def gerar_perfil(pt, br, treino=6000, teste=2000):
-    ex = {"pt": [tracos(e) for e in excertos(pt, maximo=treino + teste)],
-          "br": [tracos(e) for e in excertos(br, maximo=treino + teste)]}
-    vt = {g: vs[:treino] for g, vs in ex.items()}
+def gerar_perfil(pt, br, destino, maximo=8000, fracao_teste=0.25):
+    # os excertos seguem a ordem dos artigos/livros: os últimos 25% de cada lado são
+    # artigos e livros que não entram no cálculo e servem para validar
+    ex = {"pt": [tracos(e) for e in excertos(pt, maximo=maximo)],
+          "br": [tracos(e) for e in excertos(br, maximo=maximo)]}
+    corte = {g: int(len(vs) * (1 - fracao_teste)) for g, vs in ex.items()}
+    vt = {g: vs[:corte[g]] for g, vs in ex.items()}
     todos = vt["pt"] + vt["br"]
     chaves = sorted(todos[0])
     media = {c: statistics.mean(v[c] for v in todos) for c in chaves}
@@ -101,15 +108,16 @@ def gerar_perfil(pt, br, treino=6000, teste=2000):
     # validação em excertos que não entraram no cálculo do perfil
     acertos = total = 0
     for g, vs in ex.items():
-        for v in vs[treino:]:
+        for v in vs[corte[g]:]:
             d = {h: delta(v, media, desvio, centro[h]) for h in centro}
             acertos += min(d, key=d.get) == g
             total += 1
     perfil = {"media": media, "desvio": desvio, "centro": centro,
-              "info": {"excertos_treino": treino, "excertos_validacao": teste, "palavras_por_excerto": 250,
-                       "tracos": sel, "validacao_acerto": round(acertos / total, 3),
-                       "fontes": "CETEMPúblico 1.7 e CETENFolha 1.0 (Linguateca), amostras iniciais"}}
-    with open(PERFIL, "w", encoding="utf-8") as f:
+              "info": {"excertos_treino": {g: len(v) for g, v in vt.items()}, "excertos_validacao": total,
+                       "palavras_por_excerto": 250, "tracos": sel,
+                       "validacao_acerto": round(acertos / total, 3),
+                       "fontes": os.path.basename(pt) + " / " + os.path.basename(br)}}
+    with open(destino, "w", encoding="utf-8") as f:
         json.dump(perfil, f, ensure_ascii=False, indent=0)
     print(f"perfil gravado com {len(sel)} traços; acerto PT/BR em {total} excertos reais "
           f"de validação: {acertos / total:.1%}")
@@ -142,10 +150,16 @@ def main(argv):
     if not argv:
         print(__doc__)
         return 2
+    nome_perfil = "imprensa"
+    if "--perfil" in argv:
+        k = argv.index("--perfil")
+        nome_perfil = argv[k + 1]
+        argv = argv[:k] + argv[k + 2:]
     if argv[0] == "--gerar-perfil":
-        gerar_perfil(argv[1], argv[2])
+        gerar_perfil(argv[1], argv[2], PERFIS[nome_perfil])
         return 0
-    perfil = json.load(open(PERFIL, encoding="utf-8"))
+    perfil = json.load(open(PERFIS[nome_perfil], encoding="utf-8"))
+    print(f"(perfil {nome_perfil}; acerto de validação {perfil['info']['validacao_acerto']:.0%})")
     if argv[0] == "--pasta":
         for pasta in argv[1:]:
             ficheiros = sorted(f for f in os.listdir(pasta) if f.endswith(".md") and f != "avaliacao.md")
@@ -159,16 +173,16 @@ def main(argv):
                     soma[k] = soma.get(k, 0) + z
             top = sorted(soma.items(), key=lambda x: -abs(x[1]))[:6]
             print(f"== {pasta}: {len(res)} textos · Delta PT {dpt:.2f} · Delta BR {dbr:.2f} · "
-                  f"margem PT {dbr - dpt:+.2f} · {mais_pt}/{len(res)} mais perto do Público")
-            print("   traços que mais se afastam do Público: " + "; ".join(
+                  f"margem PT {dbr - dpt:+.2f} · {mais_pt}/{len(res)} mais perto de PT")
+            print("   traços que mais se afastam do perfil PT: " + "; ".join(
                 f"{descrever(k)} ({'acima' if z > 0 else 'abaixo'})" for k, z in top))
         return 0
     for nome in argv:
         dpt, dbr, extremos, _ = analisar(open(nome, encoding="utf-8").read(), perfil)
         print(f"== {nome}: Delta PT {dpt:.2f} · Delta BR {dbr:.2f} · margem PT {dbr - dpt:+.2f} "
-              f"({'mais perto do Público' if dpt < dbr else 'mais perto da Folha'})")
+              f"({'mais perto de PT' if dpt < dbr else 'mais perto de BR'})")
         for z, k in extremos:
-            print(f"   {descrever(k)}: {'acima' if z > 0 else 'abaixo'} do Público ({z:+.1f} desvios)")
+            print(f"   {descrever(k)}: {'acima' if z > 0 else 'abaixo'} do perfil PT ({z:+.1f} desvios)")
     return 0
 
 

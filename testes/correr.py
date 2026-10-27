@@ -78,8 +78,8 @@ def gerar(etiqueta, ids=None, sem_skill=False, conjunto="pedidos.tsv"):
             cmd += ["--disallowedTools", "Skill"]
         r = subprocess.run(cmd, cwd=neutra, capture_output=True, text=True,
                            encoding="utf-8", errors="replace", timeout=900)
-        if r.returncode != 0:
-            print(f"   falhou: {r.stderr.strip()[:300]}")
+        if r.returncode != 0 or not r.stdout.strip():
+            print(f"   falhou (código {r.returncode}): {(r.stderr or r.stdout).strip()[:300]}")
             continue
         with open(saida, "w", encoding="utf-8") as f:
             f.write(r.stdout.strip() + "\n")

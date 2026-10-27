@@ -10,16 +10,34 @@ jornalístico, por isso marcas de género (cartas, diálogos, ficção) também 
 
 Uso:
   python descobrir_tiques.py <referencia_pt.txt> <pasta_textos> [<pasta_textos> ...]
-         [--min-textos 3] [--top 60] [--saida relatorio.md]
+         [--min-textos 3] [--top 60] [--saida relatorio.md] [--dobrar]
+
+Referências: pt.txt (CETEMPúblico, imprensa) para textos não ficcionais; lit_pt.txt (prosa
+literária portuguesa 1840-1920, Project Gutenberg) para ficção, com --dobrar, porque essa
+referência tem a grafia anterior a 1911 nas palavras comuns. Os nomes dos ficheiros
+«17_v1.5.md» contam como o mesmo pedido «17».
 """
 import math
 import os
 import re
 import sys
+import unicodedata
 from collections import Counter, defaultdict
 
 PALAVRA = re.compile(r"[a-zà-öø-ÿ]+(?:-[a-zà-öø-ÿ]+)*")
 SEPARA = re.compile(r"[.!?;:,()«»\"“”—–\n]+")
+
+
+DOBRAR = False  # activado com --dobrar (referências com ortografia anterior a 1911)
+
+
+def dobrar(w):
+    """Chave neutra à grafia: sem acentos, sem consoantes dobradas, ph->f, th->t, y->i.
+    Faz coincidir «ninguém»/«ninguem», «anos»/«annos», «à»/«á», «farmácia»/«pharmacia»."""
+    w = unicodedata.normalize("NFD", w)
+    w = "".join(c for c in w if unicodedata.category(c) != "Mn")
+    w = w.replace("ph", "f").replace("th", "t").replace("y", "i")
+    return re.sub(r"([bcdfglmnpt])\1", r"\1", w)
 
 
 def segmentos(texto):
@@ -27,7 +45,7 @@ def segmentos(texto):
     for s in SEPARA.split(texto.lower()):
         toks = PALAVRA.findall(s)
         if toks:
-            yield toks
+            yield [dobrar(t) for t in toks] if DOBRAR else toks
 
 
 def ngramas(toks, n):
@@ -57,6 +75,10 @@ def ler_textos(pastas):
 
 def main(argv):
     sys.stdout.reconfigure(encoding="utf-8")
+    global DOBRAR
+    if "--dobrar" in argv:
+        DOBRAR = True
+        argv = [a for a in argv if a != "--dobrar"]
     opc = {"--min-textos": 3, "--top": 60, "--saida": None}
     pos = []
     i = 0
@@ -76,7 +98,7 @@ def main(argv):
     pedidos = {n: defaultdict(set) for n in (1, 2, 3)}
     tot_alvo = 0
     for nome, t in textos.items():
-        pid = os.path.splitext(os.path.basename(nome))[0]
+        pid = os.path.splitext(os.path.basename(nome))[0].split("_")[0]
         for toks in segmentos(t):
             tot_alvo += len(toks)
             for n in (1, 2, 3):
@@ -101,7 +123,8 @@ def main(argv):
     refc[1] = uni_ref
 
     linhas = [f"# Tiques candidatos", "",
-              f"{len(textos)} textos ({tot_alvo} palavras) comparados com {tot_ref:,} palavras do CETEMPúblico. "
+              f"{len(textos)} textos ({tot_alvo} palavras) comparados com {tot_ref:,} palavras de {os.path.basename(ref)}"
+              f"{' (comparação neutra à grafia)' if DOBRAR else ''}. "
               f"Só entram sequências presentes em pelo menos {min_textos} pedidos diferentes.", ""]
     for n in (1, 2, 3):
         res = []
@@ -115,7 +138,7 @@ def main(argv):
         res.sort(key=lambda x: -x[6])
         nome = {1: "Palavras", 2: "Sequências de 2 palavras", 3: "Sequências de 3 palavras"}[n]
         linhas += [f"## {nome} usadas a mais", "",
-                   "| sequência | ocorrências | pedidos | por milhão (gerado) | por milhão (Público) | razão | G² |",
+                   "| sequência | ocorrências | pedidos | por milhão (gerado) | por milhão (referência) | razão | G² |",
                    "|---|---|---|---|---|---|---|"]
         linhas += [f"| {r[0]} | {r[1]} | {r[2]} | {r[3]} | {r[4]} | {r[5]} | {r[6]} |" for r in res[:top]]
         linhas.append("")
@@ -129,8 +152,8 @@ def main(argv):
         esperado = pm_b * tot_alvo / 1e6
         if esperado >= 4 and pm_a < pm_b / 3:
             sub.append((g, a, round(esperado, 1), round(pm_a), round(pm_b)))
-    linhas += ["## Palavras frequentes no Público que os textos gerados evitam", "",
-               "| palavra | ocorrências | esperado | por milhão (gerado) | por milhão (Público) |",
+    linhas += ["## Palavras frequentes na referência que os textos gerados evitam", "",
+               "| palavra | ocorrências | esperado | por milhão (gerado) | por milhão (referência) |",
                "|---|---|---|---|---|"]
     linhas += [f"| {s[0]} | {s[1]} | {s[2]} | {s[3]} | {s[4]} |" for s in sub[:top]]
     rel = "\n".join(linhas) + "\n"

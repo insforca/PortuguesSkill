@@ -392,8 +392,11 @@
 }
 },
 "info": {
-"excertos_treino": 6000,
-"excertos_validacao": 2000,
+"excertos_treino": {
+"pt": 6000,
+"br": 6000
+},
+"excertos_validacao": 4000,
 "palavras_por_excerto": 250,
 "tracos": [
 "f:longas",
@@ -428,6 +431,6 @@
 "p:ao"
 ],
 "validacao_acerto": 0.861,
-"fontes": "CETEMPúblico 1.7 e CETENFolha 1.0 (Linguateca), amostras iniciais"
+"fontes": "pt.txt / br.txt"
 }
 }

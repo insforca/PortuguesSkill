@@ -177,8 +177,12 @@ class Verificador:
             ocorr = list(padrao.finditer(texto))
             if len(ocorr) > limite:
                 for m in ocorr[limite:]:
-                    self._add(res, texto, "AVISO", "marca de IA", m.start(), m.end(),
-                              f"{sug} (limite: {limite} por texto)")
+                    if sug.startswith("marcador por preencher"):
+                        # dados em falta no pedido: legítimo, mas não pode ficar no texto final
+                        self._add(res, texto, "NOTA", "marcador por preencher", m.start(), m.end(), sug)
+                    else:
+                        self._add(res, texto, "AVISO", "marca de IA", m.start(), m.end(),
+                                  f"{sug} (limite: {limite} por texto)")
         palavras = len(PALAVRA.findall(texto))
         paragrafos = [p for p in re.split(r"\n\s*\n", texto) if len(PALAVRA.findall(p)) > 15
                       and not p.lstrip().startswith(("#", "-", "*", "|", ">"))]

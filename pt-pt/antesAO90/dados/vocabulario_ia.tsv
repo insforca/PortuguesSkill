@@ -59,3 +59,7 @@
 \bcheirava? a\b	1	pormenor sensorial em fórmula: tique da própria skill
 \bàs (cinco|seis|sete|oito|nove|dez|onze|doze)( e (meia|um quarto|vinte|dez|cinco|quarenta))?\b	1	hora exacta como «pormenor concreto»: no máximo uma por texto
 \bdevagar\b	1	advérbio de cena repetido
+# --- tiques de ficção (descobrir_tiques.py contra prosa literária portuguesa, Project Gutenberg) ---
+\bcomo quem\b	1	comparação teatral repetida («como quem dá um conselho»): no máximo uma por texto
+\bninguém\b	2	«ninguém» como recurso de cena: variar
+\b(setenta|oitenta|noventa) e (um|dois|três|quatro|cinco|seis|sete|oito|nove)\b	1	idade ou ano por extenso como pormenor: tique de concretude

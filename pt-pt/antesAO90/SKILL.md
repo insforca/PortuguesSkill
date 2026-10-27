@@ -4,7 +4,7 @@ description: >-
   Norma de escrita em português europeu (PT-PT) culto, com a ortografia ANTERIOR ao Acordo Ortográfico de 1990 (acção, óptimo, actual, director, Janeiro, pára, fim-de-semana), e sem marcas de texto gerado por IA. Usar SEMPRE que se escreva, reescreva, traduza ou reveja qualquer texto em português — ensaios, trabalhos académicos, teses, recensões, contos, novelas, romances, livros, cartas, e-mails formais e mensagens informais. Usar também por cima de skills calibradas para PT-BR (humanizar, paralelismo-negativo, better-portuguese, pesquisador-br): o léxico, a sintaxe e a ortografia desta skill prevalecem. Gatilhos — escrever em português, ensaio, trabalho académico, romance, novela, conto, carta, e-mail, rever texto, tirar cara de IA, converter para a ortografia antiga, desfazer o Acordo, pré-AO90.
 metadata:
   author: insforca
-  version: "1.6.0"
+  version: "1.7.0"
   license: MIT
   repository: https://github.com/insforca/PortuguesSkill
 ---
@@ -85,7 +85,7 @@ Medido em 10 milhões de palavras do *Público*: frase média de 24 palavras e 1
 
 ## Concretude sem fórmula
 
-Um pormenor concreto por parágrafo chega, e o tipo deve variar (um número, um nome, um gesto, uma frase dita). Não repetir de texto para texto a hora exacta, o cheiro, o objecto de cozinha ou o *duas ou três*: a análise dos textos gerados mostrou que se tinham tornado tiques da própria skill (ver `references/anti-ia-pt-pt.md`).
+Um pormenor concreto por parágrafo chega, e o tipo deve variar (um número, um nome, um gesto, uma frase dita). Não repetir de texto para texto a hora exacta, o cheiro, o objecto de cozinha ou o *duas ou três*: a análise dos textos gerados mostrou que se tinham tornado tiques da própria skill (ver `references/anti-ia-pt-pt.md`). Na ficção, o mesmo vale para a comparação *como quem…*, o *ninguém* de cena, as idades e os anos por extenso (*oitenta e dois anos*, *em setenta e três*) e os nomes de personagens: variar os nomes de texto para texto e fugir aos que o modelo repete (*Inês*, *Tiago*, *Lurdes*, *Zé*).
 
 ## Ficção (contos, novelas, romances)
 

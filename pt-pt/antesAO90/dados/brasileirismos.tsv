@@ -75,8 +75,9 @@ reajuste|reajustes	actualização / aumento	aviso
 fato|fatos	facto / factos (acontecimento); fato é vestuário	aviso	verificar o sentido
 você|vocês	tratamento adequado (tu, o senhor, a senhora) ou forma impessoal	aviso	ver registos.md
 a gente	nós	aviso	só admissível em fala de personagem
-pra|pro|pros|pras	para / para o / para os / para as	erro	só em fala de personagem
-tá|tô	está / estou	erro	só em fala de personagem
+pra|pro|pros|pras	para / para o / para os / para as	aviso	normal na fala portuguesa informal; na escrita cuidada e na voz do narrador, não
+tá	está	aviso	«tá bem» é fala portuguesa corrente; na escrita cuidada, «está»
+tô	tou (fala) / estou (escrita)	erro	«tô» é brasileiro; em Portugal diz-se «tou»
 chance|chances	hipótese / possibilidade	aviso
 demanda	procura	aviso	no sentido económico
 show|shows	espectáculo / concerto	aviso
