@@ -1,0 +1,23 @@
+# Medições no corpus NOW do Corpus do Português (Mark Davies; notícias em linha 2012-2019).
+# Pesquisas feitas à mão em Outubro de 2026, vista «Chart» por país. Ocorrências por milhão de palavras.
+# Tamanho: Brasil 929,3 milhões de palavras; Portugal 493,9 milhões.
+# forma	por_milhão_PT	por_milhão_BR	razão_BR/PT	leitura
+celular	3.71	104.57	28.2	brasileirismo: confirmado
+telemóvel	47.58	0.05	0.001	forma portuguesa
+ecrã	96.17	0.05	0.001	forma portuguesa
+tela	6.62	63.25	9.6	brasileirismo no sentido de ecrã; em PT existe noutros sentidos
+palavra-passe	1.78	0.02	0.01	forma portuguesa
+senha	4.73	18.62	3.9	usada nos dois países; em PT tem outros sentidos (senha de vez): sinal fraco
+ficheiro	4.95	0.02	0.004	forma portuguesa
+aplicativo	1.60	82.56	51.6	brasileirismo: confirmado
+tá bem	0.14	0.52	3.7	rara na imprensa dos dois países; fala informal
+tou	0.55	0.47	0.9	igual nos dois (rara na imprensa)
+tô	0.19	10.67	56.2	brasileirismo: confirmado
+como quem	5.90	1.95	0.3	mais portuguesa do que brasileira: tique só por repetição
+ao mesmo tempo	11.06	8.80	0.8	normal nos dois: tique só por repetição (os textos gerados usavam-na cerca de 100 vezes mais)
+desde já	25.40	4.04	0.2	expressão portuguesa frequente: tique só como fórmula de fecho
+venho por este meio	0.23	0.00	0.0	fórmula exclusivamente portuguesa, burocrática
+está a ser	89.56	0.12	0.001	norma portuguesa
+está sendo	0.98	97.05	99.0	gerúndio: em PT, cerca de 1% das ocorrências de «está a ser»
+estão a fazer	8.72	0.02	0.002	norma portuguesa
+estão fazendo	0.16	9.87	61.7	gerúndio: em PT, cerca de 2% das ocorrências de «estão a fazer»

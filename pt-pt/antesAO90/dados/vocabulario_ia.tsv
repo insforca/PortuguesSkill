@@ -48,18 +48,18 @@
 \bnão (é|são|foi|era|será|está|estão|se trata de) [^.;:!?\n]{1,60}[,;—–]\s*(é|são|foi|era|será|está|estão|trata-se de)\b	0	paralelismo negativo «não é X, é Y»: no máximo um por texto; dizer só o que é
 \bnão (é|são|foi|era|será|está|estão) [^.;:!?\n]{1,60}[.!]\s+(É|São|Foi|Era|Será|Está|Estão)\b	0	paralelismo negativo partido em duas frases («Não é X. É Y.»): no máximo um por texto
 # --- descobertos automaticamente (ferramentas/descobrir_tiques.py, Outubro de 2026) ---
-\bao mesmo tempo\b	1	tique de ligação: usar só quando há simultaneidade real
+\bao mesmo tempo\b	1	tique de ligação: a expressão é normal em PT (11 por milhão no NOW), mas os textos gerados usavam-na cerca de 100 vezes mais; só com simultaneidade real
 \b(se quiseres|se preferir|se preferires|se quiser)\b[^.]{0,60}\b(posso|adapto|ajusto|mudo|altero|completo)\b	0	oferta de assistente dentro do texto: retirar
 \b(posso|podemos) (também )?(ajustar|adaptar|mudar|alterar|encurtar|alongar) (o|este) (texto|tom)\b	0	comentário de assistente: retirar
 \bcerca de \d+ palavras\b|\(\d+ palavras\)	0	comentário sobre o próprio texto: retirar
 \bvenho por (este|esta) (meio|via)\b	1	fórmula burocrática: aceitável num requerimento, não num e-mail corrente
-\bdesde já\b	1	fórmula de fecho gasta
+\bdesde já\b	1	fórmula de fecho gasta (a expressão é muito portuguesa; o problema é usá-la como fecho automático)
 \[[^\]\n]{2,40}\]	0	marcador por preencher: completar ou perguntar ao utilizador
 \b(duas ou três|dois ou três|três ou quatro)\b	1	imprecisão calculada repetida: tique da própria skill
 \bcheirava? a\b	1	pormenor sensorial em fórmula: tique da própria skill
 \bàs (cinco|seis|sete|oito|nove|dez|onze|doze)( e (meia|um quarto|vinte|dez|cinco|quarenta))?\b	1	hora exacta como «pormenor concreto»: no máximo uma por texto
 \bdevagar\b	1	advérbio de cena repetido
 # --- tiques de ficção (descobrir_tiques.py contra prosa literária portuguesa, Project Gutenberg) ---
-\bcomo quem\b	1	comparação teatral repetida («como quem dá um conselho»): no máximo uma por texto
+\bcomo quem\b	1	comparação teatral repetida: a construção é portuguesa (3 vezes mais frequente em PT do que no BR, NOW), mas não mais de uma por texto
 \bninguém\b	2	«ninguém» como recurso de cena: variar
 \b(setenta|oitenta|noventa) e (um|dois|três|quatro|cinco|seis|sete|oito|nove)\b	1	idade ou ano por extenso como pormenor: tique de concretude

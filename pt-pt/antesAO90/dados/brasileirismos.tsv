@@ -77,16 +77,16 @@ você|vocês	tratamento adequado (tu, o senhor, a senhora) ou forma impessoal	av
 a gente	nós	aviso	só admissível em fala de personagem
 pra|pro|pros|pras	para / para o / para os / para as	aviso	normal na fala portuguesa informal; na escrita cuidada e na voz do narrador, não
 tá	está	aviso	«tá bem» é fala portuguesa corrente; na escrita cuidada, «está»
-tô	tou (fala) / estou (escrita)	erro	«tô» é brasileiro; em Portugal diz-se «tou»
+tô	tou (fala) / estou (escrita)	erro	«tô» é 56 vezes mais frequente no Brasil (NOW); em Portugal, «tou»
 chance|chances	hipótese / possibilidade	aviso
 demanda	procura	aviso	no sentido económico
 show|shows	espectáculo / concerto	aviso
 buscar|busca|buscando|buscou	procurar	aviso	«buscar» existe em PT, mas «procurar» é o mais comum
-# --- vocabulário digital e tecnológico (consensual; ainda não medido em corpus: os corpora usados são dos anos 90) ---
-celular|celulares	telemóvel / telemóveis	erro
-aplicativo|aplicativos	aplicação / aplicações	erro
-tela|telas	ecrã / ecrãs	aviso	«tela» existe em PT no sentido de pintura
-senha|senhas	palavra-passe / código	aviso	«senha» em PT é a senha de vez (fila); na informática, palavra-passe
+# --- vocabulário digital e tecnológico (medido no corpus NOW, 2012-2019: ver now_medicoes.tsv) ---
+celular|celulares	telemóvel / telemóveis	erro	28 vezes mais frequente no Brasil (NOW)
+aplicativo|aplicativos	aplicação / aplicações	erro	52 vezes mais frequente no Brasil (NOW)
+tela|telas	ecrã / ecrãs	aviso	«tela» existe em PT no sentido de pintura; no sentido de ecrã é 10 vezes mais brasileira (NOW)
+senha|senhas	palavra-passe / código	aviso	«senha» também se usa em PT (senha de vez, código); é só 4 vezes mais brasileira (NOW): sinal fraco
 baixar|baixou|baixado|baixe	descarregar / descarregou…	aviso	só no sentido informático
 deletar|deletou|deletado|delete	apagar / eliminar	erro
 salvar|salvou|salvo	guardar / gravou…	aviso	só no sentido informático («salvar» uma vida está certo)
