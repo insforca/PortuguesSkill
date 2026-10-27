@@ -4,7 +4,7 @@ description: >-
   Norma de escrita em português europeu (PT-PT) culto, com a ortografia ANTERIOR ao Acordo Ortográfico de 1990 (acção, óptimo, actual, director, Janeiro, pára, fim-de-semana), e sem marcas de texto gerado por IA. Usar SEMPRE que se escreva, reescreva, traduza ou reveja qualquer texto em português — ensaios, trabalhos académicos, teses, recensões, contos, novelas, romances, livros, cartas, e-mails formais e mensagens informais. Usar também por cima de skills calibradas para PT-BR (humanizar, paralelismo-negativo, better-portuguese, pesquisador-br): o léxico, a sintaxe e a ortografia desta skill prevalecem. Gatilhos — escrever em português, ensaio, trabalho académico, romance, novela, conto, carta, e-mail, rever texto, tirar cara de IA, converter para a ortografia antiga, desfazer o Acordo, pré-AO90.
 metadata:
   author: insforca
-  version: "1.7.0"
+  version: "1.8.0"
   license: MIT
   repository: https://github.com/insforca/PortuguesSkill
 ---
@@ -57,12 +57,16 @@ Quando outra skill instalada estiver calibrada para PT-BR (`humanizar`, `humaniz
 4. **Passagem de língua:** pronomes (ênclise e próclise), "a + infinitivo", isto/isso/aquilo, artigo antes do possessivo, regência dos verbos.
 5. **Passagem ortográfica pré-AO90:** consoantes mudas, acentos diferenciais, hífenes, maiúsculas nos meses e nas estações.
 6. **Leitura em voz alta (mental):** se uma frase não se diria assim em Portugal por uma pessoa culta, reescrevê-la.
-7. **Verificação automática:** se puderes correr comandos, grava o texto num ficheiro e corre `python scripts/verificar.py <ficheiro>` (a partir da pasta desta skill). Corrige todos os ERROS. Decide os AVISOS caso a caso: muitos são escolhas legítimas. As NOTAS são palavras que os dicionários não conhecem, normalmente nomes ou termos raros. Se o verificador não estiver disponível, usa as listas em `dados/` (`ao90_preao.tsv`, `brasileirismos.tsv`, `vocabulario_ia.tsv`) como lista de verificação.
+7. **Verificação automática:** se puderes correr comandos, grava o texto num ficheiro e corre `python scripts/verificar.py --registo <ensaio|academico|cronica|noticia> <ficheiro>` (a partir da pasta desta skill; o registo afina a norma de comprimento de frase). Corrige todos os ERROS. Decide os AVISOS caso a caso: muitos são escolhas legítimas. As NOTAS são palavras que os dicionários não conhecem, normalmente nomes ou termos raros. Se o verificador não estiver disponível, usa as listas em `dados/` (`ao90_preao.tsv`, `brasileirismos.tsv`, `vocabulario_ia.tsv`) como lista de verificação.
 8. **Entrega:** o texto limpo e, à parte, no máximo três linhas sobre dúvidas ou escolhas que o utilizador deva confirmar.
 
 Para textos longos (capítulos, teses, livros), fazer as passagens 3 a 7 por secção, não no fim do documento inteiro.
 
 **Instalação do verificador** (uma vez): `python -m pip install spylls` e `python scripts/instalar_dicionarios.py`. Sem os dicionários, o verificador funciona em modo reduzido: usa a lista das cerca de 1400 formas AO90 mais frequentes, os brasileirismos, as marcas de IA e as regras de sintaxe.
+
+**Dúvidas sem dados** (é português de Portugal ou do Brasil? é frequente ou rara?): `python scripts/consulta_cdp.py "<expressão>"` prepara uma consulta **manual** ao Corpus do Português (corpus NOW, notícias 2012–2019, por país), com a expressão pronta a colar. O site proíbe acesso automático: a consulta é feita pelo utilizador. As medições ficam em `dados/now_medicoes.tsv`.
+
+**Origem das regras:** as listas em `dados/` são geradas a partir de um cofre Obsidian (`conhecimento/` no repositório da skill), em que cada regra está ligada às medições que a justificam (CETEMPúblico, CHAVE, NOW, corpora orais da Linguateca, debates parlamentares).
 
 ## Trabalhos académicos (Portugal)
 
@@ -81,7 +85,7 @@ Para textos longos (capítulos, teses, livros), fazer as passagens 3 a 7 por sec
 
 ## Comprimento das frases (vale para ensaio, crónica, académico e narração)
 
-Medido em 10 milhões de palavras do *Público*: frase média de 24 palavras e 1 em cada 5 frases com mais de 35. Os modelos de linguagem escrevem frases de 17 palavras, todas parecidas, e isso denuncia-os mais do que qualquer palavra. **Alvo: média entre 20 e 28 palavras, e pelo menos uma frase longa (35 palavras ou mais, articulada com vírgulas, ponto e vírgula ou orações subordinadas) por parágrafo**, ao lado de frases curtas. O verificador mede isto. Em e-mails, mensagens e diálogos, frases curtas são naturais.
+Medido no CETEMPúblico completo (168 milhões de palavras, *Público* 1991–1998): frase média de 24 palavras e 1 em cada 5 frases com 35 ou mais. Por registo: opinião/ensaio 22,8 palavras e 18,5% de frases longas; cultura/crónica 23,6 e 19,9%; notícia 24,7 e 21,5%. Os modelos de linguagem escrevem frases de 17 palavras, todas parecidas, e isso denuncia-os mais do que qualquer palavra. **Alvo: média entre 20 e 28 palavras, e pelo menos uma frase longa (35 palavras ou mais, articulada com vírgulas, ponto e vírgula ou orações subordinadas) por parágrafo**, ao lado de frases curtas. O verificador mede isto. Em e-mails, mensagens e diálogos, frases curtas são naturais.
 
 ## Concretude sem fórmula
 

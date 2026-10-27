@@ -12,6 +12,8 @@ Escolher o registo antes de escrever e mantê-lo do princípio ao fim. O tratame
 | Altas entidades, documentos muito formais | Vossa Excelência (V. Ex.ª) | 3.ª pessoa |
 | "você" | aceitável entre colegas da mesma idade e em contexto urbano, mas pode soar distante ou mesmo rude; na dúvida, evitar e usar o nome ou elidir o sujeito | 3.ª pessoa |
 
+Medido nos debates parlamentares (1945–2011): *V. Ex.ª* era frequente nas réplicas dos anos 40 e 50 (16 por mil palavras) e foi rareando (1 por mil nos anos 2000); *você* é praticamente inexistente no registo formal (0,1 por mil). O tratamento parlamentar corrente é *o Sr. Deputado*, *a Sr.ª Deputada*.
+
 Truque português: **elidir o sujeito** ("Pode enviar-me o ficheiro?") resolve a maior parte das dúvidas entre "você" e "o senhor".
 
 ## 1. Académico
@@ -48,6 +50,22 @@ Truque português: **elidir o sujeito** ("Pode enviar-me o ficheiro?") resolve a
 - *tu*, frases curtas, elipses, ironia.
 - Marcas orais portuguesas, com moderação na escrita: *pá*, *olha*, *então*, *pronto*, *se calhar*, *ya* (jovem), *fixe*, *giro*, *bué* (jovem e lisboeta; não usar fora desse contexto), *beijinhos* e *bjs* (fecho afectuoso, muito comum).
 - Mesmo no informal: nada de gerúndio brasileiro, nada de "a gente" como norma, e a grafia pré-AO90 mantém-se (*actualmente*, *óptimo*, *fim-de-semana*).
+
+### Marcas orais medidas (por milhão de palavras, fala real)
+
+Medido em entrevistas orais da Linguateca: *Museu da Pessoa* (mesma recolha em Portugal e no Brasil), *CORDIAL-SIN* (falares regionais portugueses) e *C-Oral-Brasil*.
+
+| Usar (português de Portugal) | fala PT | fala BR | Evitar (brasileiro) | fala PT | fala BR |
+|---|---|---|---|---|---|
+| *se calhar* | 121 | 1 | *né* | 0 | 2937 |
+| *portanto* (como marcador) | 943 | 40 | *cê* | 0 | 1392 |
+| *pronto* | 589 | 63 | *ué* | 0 | 109 |
+| *olhe* (tratamento formal) | 388 | 11 | *legal* (= fixe) | 3 | 313 |
+| *ora* | 221 | 14 | *você* (como tratamento corrente) | 428 | 5815 |
+| *cá* | 1072 | 258 | | | |
+| *rapariga*, *miúdo* | 141, 66 | ≈ 0 | | | |
+
+Ressalvas: as transcrições portuguesas normalizam a fala (escrevem *está*, *estou*, *para*), por isso a ausência de *tá*, *tou*, *pra* nesses corpora **não** prova que não se digam em Portugal: dizem-se, e em diálogo de personagem estão certas. *Bué* e *fixe* não aparecem porque os entrevistados são sobretudo adultos e idosos: são marcas jovens e urbanas.
 
 ## 5. Literário
 

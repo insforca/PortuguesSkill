@@ -136,3 +136,32 @@ Os textos oficiais (leis, pareceres, actas) e os discursos proferidos perante as
 - Frases declarativas, sujeito e verbo claros, datas no início. O registo solene consegue-se pela sobriedade e não pelos adjectivos.
 - Maiúsculas institucionais da época: *os Portugueses*, *o País*, *a Revolução*.
 - No articulado (art. 2.º): *tem por objectivo assegurar a transição…*: a grafia pré-AO90 no texto fundador da democracia.
+
+---
+
+## 8. Assembleia da República, 1981 — intervenção num debate sobre saúde
+
+**Registo:** discurso parlamentar combativo, com expressão popular.
+**Fonte:** Diário da Assembleia da República, I Série, 1981 (amostra recolhida com `ferramentas/recolher_parlamento.py`). OCR corrigido: *autorizaçãozinba* → *autorizaçãozinha*, *u seu* → *o seu*, *Sc.* → *Sr.*, maiúsculas indevidas em *como*, *uma*, *um*.
+
+> O Governo não teve coragem e veio aqui, à sucapa, como «o gato escondido com o rabo de fora», pedir uma autorizaçãozinha para ver se mete o seu decreto-lei. Muito concretamente, quero perguntar ao Sr. Ministro se o decreto-lei que ele nos quer apresentar vai condicionar o actual estado em que estão a funcionar os hospitais.
+
+**O que observar:**
+- O provérbio e o diminutivo irónico (*autorizaçãozinha*) dentro de um discurso formal: a oralidade portuguesa culta não se proíbe a expressão popular, usa-a como arma.
+- *estão a funcionar*: em 1981, *estar a + infinitivo* já era a norma no Parlamento (ver `testes/analises/parlamento.md`).
+- Grafia da época: *actual*, *projecto*.
+
+---
+
+## 9. Assembleia da República, 2009 — pergunta a um secretário de Estado
+
+**Registo:** intervenção parlamentar argumentativa, oral e preparada.
+**Fonte:** Diário da Assembleia da República, I Série, 2009 (ainda antes da aplicação do AO90 no Parlamento).
+
+> Foram 62 casos controversos em que foi aplicada a lei, como devia ser, mas são 62 casos. Só 62. […] Ora, o Governo apresentou recentemente (o Sr. Secretário de Estado já se referiu a isso) uma proposta de lei que é contraditória com a posição que foi defendida aqui pelo Bloco de Esquerda, em convergência, aliás, com a posição do Partido Socialista […]. Qual é o problema da proposta de lei do Governo? É que é uma «pescadinha de rabo na boca». […] Mas como é que se sabe que há esse património? Não se sabe! Não há qualquer meio para o fazer.
+
+**O que observar:**
+- A frase-martelo *Só 62.* depois de uma frase longa: o contraste de ritmo faz o argumento.
+- *Ora* a abrir a objecção e *aliás* intercalado: dois conectores muito portugueses (ver `references/registos.md`, marcas orais medidas).
+- A pergunta retórica que responde a si própria (*Não se sabe!*): funciona porque a resposta é um facto, não uma moral.
+- A expressão popular entre aspas (*pescadinha de rabo na boca*) para nomear um raciocínio circular.

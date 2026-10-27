@@ -70,19 +70,32 @@ def tracos(texto):
     return t
 
 
-def excertos(caminho, tamanho=250, maximo=6000):
-    """Divide um corpus (artigos separados por linha em branco) em excertos de ~tamanho palavras."""
-    atual, n_atual, saida = [], 0, []
+def excertos(caminho, tamanho=250, maximo=6000, amostrar=False):
+    """Divide um corpus (artigos separados por linha em branco) em excertos de ~tamanho palavras.
+
+    Com amostrar=True percorre o ficheiro inteiro e guarda uma amostra aleatória (reservoir
+    sampling, semente fixa) de «maximo» excertos, em vez dos primeiros: para corpora grandes,
+    como o CETEMPúblico completo, cujo início é de um só período."""
+    import random
+    rnd = random.Random(1990)
+    atual, n_atual, saida, vistos = [], 0, [], 0
     with open(caminho, encoding="utf-8") as f:
         for linha in f:
-            if not linha.strip():
+            if not linha.strip() or linha.startswith("## "):
                 continue
             atual.append(linha.strip())
             n_atual += len(linha.split())
             if n_atual >= tamanho:
-                saida.append(" ".join(atual))
+                ex = " ".join(atual)
                 atual, n_atual = [], 0
-                if len(saida) >= maximo:
+                vistos += 1
+                if len(saida) < maximo:
+                    saida.append(ex)
+                elif amostrar:
+                    j = rnd.randrange(vistos)
+                    if j < maximo:
+                        saida[j] = ex
+                else:
                     break
     return saida
 
@@ -93,8 +106,8 @@ N_TRACOS = 30  # só os traços que mais separam PT de BR; os restantes acrescen
 def gerar_perfil(pt, br, destino, maximo=8000, fracao_teste=0.25):
     # os excertos seguem a ordem dos artigos/livros: os últimos 25% de cada lado são
     # artigos e livros que não entram no cálculo e servem para validar
-    ex = {"pt": [tracos(e) for e in excertos(pt, maximo=maximo)],
-          "br": [tracos(e) for e in excertos(br, maximo=maximo)]}
+    ex = {"pt": [tracos(e) for e in excertos(pt, maximo=maximo, amostrar=True)],
+          "br": [tracos(e) for e in excertos(br, maximo=maximo, amostrar=True)]}
     corte = {g: int(len(vs) * (1 - fracao_teste)) for g, vs in ex.items()}
     vt = {g: vs[:corte[g]] for g, vs in ex.items()}
     todos = vt["pt"] + vt["br"]

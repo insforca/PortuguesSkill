@@ -5,6 +5,7 @@ Uso:
   python verificar.py -            (lê da entrada padrão)
   python verificar.py --json texto.md
   python verificar.py --rapido texto.md   (não carrega os dicionários Hunspell)
+  python verificar.py --registo ensaio texto.md   (norma de frase: ensaio|academico|cronica|noticia|geral)
 
 Níveis:
   ERRO   grafia AO90 ou brasileira, brasileirismo lexical, gerúndio com «estar», próclise inicial
@@ -62,7 +63,15 @@ def carregar_dicionarios():
 
 
 class Verificador:
-    def __init__(self, usar_dicionarios=True):
+    def __init__(self, usar_dicionarios=True, registo=None):
+        # Normas de comprimento de frase por registo (CETEMPúblico; ver dados/normas_frase.json)
+        normas = {}
+        caminho = os.path.join(DADOS, "normas_frase.json")
+        if os.path.exists(caminho):
+            normas = json.load(open(caminho, encoding="utf-8"))
+        chave = {"academico": "ensaio"}.get(registo, registo) or "geral"
+        self.norma = normas.get(chave) or normas.get("geral") or {"media": 24.0, "pct_35_ou_mais": 19.0}
+        self.registo = chave
         self.ao90 = {a: p for a, p, *_ in ler_tsv("ao90_preao.tsv")}
         self.bras = []
         for linha in ler_tsv("brasileirismos.tsv"):
@@ -217,7 +226,7 @@ class Verificador:
                 self._add(res, texto, "AVISO", "ritmo", 0, 0,
                           f"frases de tamanho uniforme (variação {cv:.2f}); alternar longas e curtas")
         # Comprimento das frases em prosa corrida (não em diálogo nem em listas).
-        # Referência: CETEMPúblico, média de 24 palavras e 19% de frases com mais de 35.
+        # Referência: CETEMPúblico, por registo (self.norma); alerta abaixo de média-5 ou de 40% das frases longas.
         prosa = "\n".join(p for p in paragrafos if not p.lstrip().startswith("—"))
         prosa = ABREVIATURAS.sub(lambda m: m.group(0).replace(".", "§"), prosa)
         frases_prosa = [len(PALAVRA.findall(f)) for f in re.split(r"(?<=[.!?…])\s+", prosa)
@@ -225,10 +234,12 @@ class Verificador:
         if sum(frases_prosa) >= 150 and len(frases_prosa) >= 6:
             media = statistics.mean(frases_prosa)
             longas = sum(1 for x in frases_prosa if x >= 35) / len(frases_prosa) * 100
-            if media < 19 or longas < 8:
+            ref_m, ref_l = self.norma["media"], self.norma["pct_35_ou_mais"]
+            if media < ref_m - 5 or longas < ref_l * 0.4:
                 self._add(res, texto, "AVISO", "comprimento das frases", 0, 0,
                           f"frase média de {media:.0f} palavras e {longas:.0f}% de frases com 35 ou mais "
-                          f"(no Público: 24 e 19%); juntar frases e incluir pelo menos uma longa por parágrafo")
+                          f"(no Público, registo «{self.registo}»: {ref_m:.0f} e {ref_l:.0f}%); "
+                          f"juntar frases e incluir pelo menos uma longa por parágrafo")
         triades = re.findall(r"\b\w+, \w+ e \w+\b", texto)
         if len(triades) > max(2, palavras // 200):
             self._add(res, texto, "AVISO", "tríades", 0, 0, f"{len(triades)} enumerações de três elementos")
@@ -260,12 +271,17 @@ def imprimir(nome, res, palavras):
 
 
 def main(argv):
+    registo = None
+    if "--registo" in argv:
+        k = argv.index("--registo")
+        registo = argv[k + 1]
+        argv = argv[:k] + argv[k + 2:]
     args = [a for a in argv if not a.startswith("--")]
     if not args:
         print(__doc__)
         return 2
     sys.stdout.reconfigure(encoding="utf-8")
-    v = Verificador(usar_dicionarios="--rapido" not in argv)
+    v = Verificador(usar_dicionarios="--rapido" not in argv, registo=registo)
     if v.dic is None and "--rapido" not in argv:
         print("(dicionários Hunspell não disponíveis: verificação ortográfica limitada à lista AO90; "
               "ver scripts/instalar_dicionarios.py)", file=sys.stderr)

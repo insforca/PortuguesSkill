@@ -99,3 +99,8 @@ printar|printou|print	captura de ecrã	aviso
 arquivo|arquivos	ficheiro / ficheiros (informático)	aviso	«arquivo» em PT é o lugar ou o conjunto de documentos
 digitar|digite|digitou|digitado|digita	escrever / introduzir / marcar	aviso	no sentido de teclar
 salve|salvem	guarde / guardem	aviso	só no sentido informático
+# --- registo oral informal (medido nos corpora orais da Linguateca: Museu da Pessoa PT/BR, C-Oral-Brasil) ---
+né	não é? / pois / não achas?	erro	marcador oral brasileiro: 2937 por milhão na fala brasileira, 0 na portuguesa
+cê|cês	tu / você / o senhor (conforme o tratamento)	erro	forma oral brasileira de «você»: 1392 por milhão na fala brasileira, 0 na portuguesa
+ué	então? / ora essa! / olha	erro	interjeição brasileira: 109 por milhão na fala brasileira, 0 na portuguesa
+legal|legais	fixe / porreiro / giro (no sentido informal)	aviso	no sentido de «fixe» é brasileiro (oral BR 313 vs PT 3 por milhão); no sentido jurídico está certo

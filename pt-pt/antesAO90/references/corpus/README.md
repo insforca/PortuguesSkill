@@ -24,7 +24,7 @@ Este corpus serve para **ancorar a voz**. Antes de escrever um texto longo (um c
 
 ## O gerúndio nos textos antigos
 
-Eça (*"Os ingleses estão experimentando"*, 1880) e Pessoa (*"estou escrevendo directamente"*, 1935) usam o gerúndio progressivo. Até meados do século XX era corrente em Portugal, e ainda o é em falares do Sul. Não é, portanto, um brasileirismo nestes autores. Mas a norma culta actual de Portugal é **estar a + infinitivo**: na imprensa portuguesa de 2012-2019 (corpus NOW), *está sendo* aparece cerca de 1 vez por cada 90 de *está a ser*, e *estão fazendo* cerca de 2 por cada 100 de *estão a fazer*; no Brasil é exactamente o inverso. É essa a forma e é essa que a skill usa, salvo em diálogo de personagem do Sul ou em pastiche declarado.
+Eça (*"Os ingleses estão experimentando"*, 1880) e Pessoa (*"estou escrevendo directamente"*, 1935) usam o gerúndio progressivo. Até meados do século XX era corrente em Portugal, e ainda o é em falares do Sul. Os debates parlamentares medem a mudança: nos discursos, o gerúndio era 63% das construções progressivas nos anos 40, 42% nos anos 60, 14% nos anos 70, 4% nos anos 80 e 1% a partir dos anos 90 (o resto, *estar a + infinitivo*; ver `testes/analises/parlamento.md` no repositório). Não é, portanto, um brasileirismo nestes autores. Mas a norma culta actual de Portugal é **estar a + infinitivo**: na imprensa portuguesa de 2012-2019 (corpus NOW), *está sendo* aparece cerca de 1 vez por cada 90 de *está a ser*, e *estão fazendo* cerca de 2 por cada 100 de *estão a fazer*; no Brasil é exactamente o inverso. É essa a forma e é essa que a skill usa, salvo em diálogo de personagem do Sul ou em pastiche declarado.
 
 ## Critérios de selecção e direitos
 

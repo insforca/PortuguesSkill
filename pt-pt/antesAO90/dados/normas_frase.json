@@ -1,0 +1,49 @@
+{
+ "geral": {
+  "frases": 6939818,
+  "media": 24.2,
+  "desvio": 14.4,
+  "pct_35_ou_mais": 20.7
+ },
+ "cronica": {
+  "frases": 1307729,
+  "media": 23.6,
+  "desvio": 15.2,
+  "pct_35_ou_mais": 19.9
+ },
+ "noticia": {
+  "frases": 4499543,
+  "media": 24.7,
+  "desvio": 13.9,
+  "pct_35_ou_mais": 21.5
+ },
+ "ensaio": {
+  "frases": 128223,
+  "media": 22.8,
+  "desvio": 15.7,
+  "pct_35_ou_mais": 18.5
+ },
+ "_fonte": "CETEMPúblico 1.7 (Linguateca), Público 1991-1998, frases com mais de 2 palavras",
+ "_seccoes": {
+  "opi": "ensaio",
+  "clt": "cronica",
+  "clt-soc": "cronica",
+  "pol": "noticia",
+  "soc": "noticia",
+  "eco": "noticia",
+  "des": "noticia"
+ },
+ "discurso": {
+  "frases": 227795,
+  "media": 28.9,
+  "desvio": 24.0,
+  "pct_35_ou_mais": 30.6
+ },
+ "oral": {
+  "frases": 26013,
+  "media": 14.9,
+  "desvio": 11.2,
+  "pct_35_ou_mais": 7.1
+ },
+ "_fonte_parlamento": "Debates parlamentares 1945-2011 (debates.parlamento.pt), amostra de 6 sessões/ano"
+}

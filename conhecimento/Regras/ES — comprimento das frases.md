@@ -8,7 +8,7 @@ gerado: false
 implementacao: 'scripts/verificar.py'
 estado: 'medida'
 fenomeno: '[[Comprimento das frases]]'
-evidencia: ["[[CETEMPúblico — comprimento das frases]]", "[[Bateria — v1.6]]"]
+evidencia: ["[[CETEMPúblico — comprimento das frases]]", "[[CETEMPúblico — frase, geral]]", "[[CETEMPúblico — frase, ensaio]]", "[[CETEMPúblico — frase, cronica]]", "[[CETEMPúblico — frase, noticia]]", "[[Bateria — v1.6]]"]
 ---
 
 # ES — comprimento das frases
