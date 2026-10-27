@@ -1,0 +1,12 @@
+{
+  "colorGroups": [
+    {"query": "path:Regras", "color": {"a": 1, "rgb": 14767961}},
+    {"query": "path:Medições", "color": {"a": 1, "rgb": 5142951}},
+    {"query": "path:Fontes", "color": {"a": 1, "rgb": 5873999}},
+    {"query": "path:Fenómenos", "color": {"a": 1, "rgb": 15896107}},
+    {"query": "path:Registos", "color": {"a": 1, "rgb": 11565729}},
+    {"query": "path:Testes", "color": {"a": 1, "rgb": 7780274}}
+  ],
+  "showTags": false,
+  "showAttachments": false
+}

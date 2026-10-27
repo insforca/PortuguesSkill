@@ -3,3 +3,6 @@ pt-pt/antesAO90/dados/dicionarios/
 __pycache__/
 testes/log_*.txt
 .cache/
+conhecimento/.obsidian/workspace*
+conhecimento/.obsidian/plugins/
+conhecimento/.obsidian/cache
