@@ -82,3 +82,17 @@ chance|chances	hipótese / possibilidade	aviso
 demanda	procura	aviso	no sentido económico
 show|shows	espectáculo / concerto	aviso
 buscar|busca|buscando|buscou	procurar	aviso	«buscar» existe em PT, mas «procurar» é o mais comum
+# --- vocabulário digital e tecnológico (consensual; ainda não medido em corpus: os corpora usados são dos anos 90) ---
+celular|celulares	telemóvel / telemóveis	erro
+aplicativo|aplicativos	aplicação / aplicações	erro
+tela|telas	ecrã / ecrãs	aviso	«tela» existe em PT no sentido de pintura
+senha|senhas	palavra-passe / código	aviso	«senha» em PT é a senha de vez (fila); na informática, palavra-passe
+baixar|baixou|baixado|baixe	descarregar / descarregou…	aviso	só no sentido informático
+deletar|deletou|deletado|delete	apagar / eliminar	erro
+salvar|salvou|salvo	guardar / gravou…	aviso	só no sentido informático («salvar» uma vida está certo)
+mouse	rato	erro
+postar|postou|postado|postagem	publicar / publicou / publicação	erro
+site|sites	sítio / página (na Internet); «site» também se usa em PT	aviso
+time-line|timeline	cronologia	aviso
+printar|printou|print	captura de ecrã	aviso
+arquivo|arquivos	ficheiro / ficheiros (informático)	aviso	«arquivo» em PT é o lugar ou o conjunto de documentos
