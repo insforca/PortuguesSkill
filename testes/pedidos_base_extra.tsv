@@ -1,0 +1,44 @@
+# Pedidos extra para a linha de base (sem a skill): servem para medir marcas de IA com mais texto.
+# id	registo	pedido
+E01	ensaio	Escreve um ensaio curto (cerca de 400 palavras) sobre o papel das bibliotecas públicas numa cidade pequena.
+E02	ensaio	Escreve um ensaio (cerca de 400 palavras) sobre a relação entre tecnologia e solidão.
+E03	ensaio	Escreve um ensaio (cerca de 400 palavras) sobre o que significa ser europeu hoje.
+E04	ensaio	Escreve um texto de reflexão (cerca de 400 palavras) sobre o trabalho remoto e o fim do escritório.
+E05	ensaio	Escreve um ensaio (cerca de 400 palavras) sobre a importância da leitura de clássicos na escola.
+E06	ensaio	Escreve um ensaio (cerca de 400 palavras) sobre o turismo de massas e as cidades históricas.
+E07	opinião	Escreve um artigo de opinião (cerca de 350 palavras) sobre a semana de quatro dias de trabalho.
+E08	opinião	Escreve um artigo de opinião (cerca de 350 palavras) sobre o uso de telemóveis nas escolas.
+E09	opinião	Escreve um artigo de opinião (cerca de 350 palavras) sobre a desertificação do interior de Portugal.
+E10	opinião	Escreve um artigo de opinião (cerca de 350 palavras) sobre a inteligência artificial no ensino superior.
+E11	opinião	Escreve um artigo de opinião (cerca de 350 palavras) sobre os incêndios florestais e a gestão da floresta.
+E12	opinião	Escreve um artigo de opinião (cerca de 350 palavras) sobre o preço dos transportes públicos.
+E13	académico	Escreve a introdução (cerca de 300 palavras) de um trabalho sobre a evolução da língua portuguesa no século XX.
+E14	académico	Escreve o enquadramento teórico (cerca de 350 palavras) de uma tese sobre migrações e identidade.
+E15	académico	Escreve a discussão de resultados (cerca de 300 palavras) de um estudo sobre hábitos de leitura de estudantes universitários.
+E16	académico	Escreve o resumo (cerca de 200 palavras) de um artigo sobre economia circular nas autarquias.
+E17	académico	Escreve a conclusão (cerca de 300 palavras) de um trabalho sobre a integração europeia de Portugal.
+E18	académico	Escreve uma recensão crítica (cerca de 350 palavras) de um livro imaginário sobre a história do fado.
+E19	institucional	Escreve o texto de apresentação (cerca de 250 palavras) de uma associação cultural de bairro.
+E20	institucional	Escreve um comunicado de imprensa (cerca de 250 palavras) de uma câmara municipal sobre a abertura de um novo parque.
+E21	institucional	Escreve a mensagem do director (cerca de 250 palavras) para o relatório anual de uma fundação.
+E22	institucional	Escreve a descrição (cerca de 200 palavras) de um projecto de investigação para um pedido de financiamento.
+E23	institucional	Escreve a missão e os valores (cerca de 200 palavras) de uma pequena empresa de design.
+E24	institucional	Escreve o discurso de abertura (cerca de 300 palavras) de um congresso sobre educação.
+E25	formal	Escreve uma carta a um professor a pedir uma carta de recomendação para um mestrado.
+E26	formal	Escreve um e-mail a uma editora a propor a tradução de um livro.
+E27	formal	Escreve uma carta de agradecimento a uma instituição que acolheu um estágio.
+E28	formal	Escreve um e-mail a um cliente a explicar um atraso na entrega de um projecto.
+E29	corrente	Escreve um e-mail a uma equipa a resumir as decisões de uma reunião.
+E30	corrente	Escreve uma mensagem a uma colega a pedir ajuda com uma apresentação.
+E31	crónica	Escreve uma crónica (cerca de 350 palavras) sobre o primeiro dia de chuva do Outono em Lisboa.
+E32	crónica	Escreve uma crónica (cerca de 350 palavras) sobre um café de bairro que vai fechar.
+E33	crónica	Escreve uma crónica (cerca de 350 palavras) sobre uma viagem de autocarro pelo Alentejo.
+E34	crónica	Escreve uma crónica (cerca de 350 palavras) sobre os mercados municipais.
+E35	ficção	Escreve o início (cerca de 350 palavras) de um conto sobre um farol abandonado.
+E36	ficção	Escreve uma cena (cerca de 300 palavras) de reencontro entre dois irmãos depois de vinte anos.
+E37	ficção	Escreve o primeiro capítulo (cerca de 400 palavras) de um romance passado no Porto nos anos 70.
+E38	ficção	Escreve um conto curto (cerca de 350 palavras) sobre uma carta que chega com trinta anos de atraso.
+E39	divulgação	Explica (cerca de 300 palavras) a um público geral o que são as alterações climáticas.
+E40	divulgação	Escreve um texto de divulgação (cerca de 300 palavras) sobre a importância das abelhas.
+E41	divulgação	Escreve um texto (cerca de 300 palavras) para um museu sobre a história dos azulejos em Portugal.
+E42	divulgação	Escreve um texto (cerca de 300 palavras) sobre os benefícios de aprender uma segunda língua.

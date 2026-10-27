@@ -5,7 +5,7 @@ padrao: '\bdesafios?\b'
 limite: 1
 sugestao: 'problema, dificuldade, obstáculo'
 nivel: 'aviso'
-estado: 'presumida'
+estado: 'medida'
 grupo: 'base'
 ordem: 13
 fenomeno: '[[Marcas de IA]]'

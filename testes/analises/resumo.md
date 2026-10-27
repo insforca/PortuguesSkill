@@ -66,3 +66,7 @@ Todos passaram para `dados/vocabulario_ia.tsv` e para as regras da skill (v1.6 e
 - Achado principal: nos discursos parlamentares o gerúndio progressivo cai de 63% (anos 40) para 1% (anos 90) — a norma actual de «estar a + infinitivo» fixou-se entre os anos 60 e 80 (`parlamento.md`).
 - Ficção da v1.8: desapareceram os tiques medidos na v1.6 (*como quem*, nomes repetidos, *cheira*, *devagar*).
 - Regras e medições passam a viver no cofre Obsidian `Portuguese Skill/` (fonte de verdade; `ferramentas/gerar_dados.py`).
+
+## Linha de base extra (Outubro de 2026)
+
+42 textos novos sem a skill (14 588 palavras; `pedidos_base_extra.tsv`): 5,8 erros e 8,2 avisos por mil palavras, quase todos de grafia AO90. Com 23 mil palavras de referência IA, quatro marcas presumidas passaram a medidas: *desafios* (5× a prosa portuguesa), *ecossistemas* (16×), *não é… é* (6×) e *potencializar* (25×). Das 20 que ficam presumidas, 13 nunca aparecem nos textos do Claude (*explorar*, *mergulhar*, *tapeçaria*, *sinergias*…). Vêm de listas feitas para outros modelos. *Ou seja*, *por um lado* e *fundamental* aparecem até menos do que no Público e no Parlamento. Pormenor em `regras_medidas.md`.

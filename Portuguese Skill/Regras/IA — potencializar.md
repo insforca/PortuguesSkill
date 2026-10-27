@@ -5,7 +5,7 @@ padrao: '\b(potencializa|alavanca)(r|m|ndo)?\b'
 limite: 0
 sugestao: 'reforçar, aumentar, aproveitar'
 nivel: 'aviso'
-estado: 'presumida'
+estado: 'medida'
 grupo: 'base'
 ordem: 15
 fenomeno: '[[Marcas de IA]]'

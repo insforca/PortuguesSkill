@@ -5,7 +5,7 @@ padrao: '\becossistemas?\b'
 limite: 0
 sugestao: 'cortar ou dizer em concreto'
 nivel: 'aviso'
-estado: 'presumida'
+estado: 'medida'
 grupo: 'base'
 ordem: 19
 fenomeno: '[[Marcas de IA]]'

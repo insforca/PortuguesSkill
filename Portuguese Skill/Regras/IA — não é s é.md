@@ -5,7 +5,7 @@ padrao: '\bnão (é|são|foi|era|será|está|estão|se trata de) [^.;:!?\n]{1,60
 limite: 0
 sugestao: 'paralelismo negativo «não é X, é Y»: no máximo um por texto; dizer só o que é'
 nivel: 'aviso'
-estado: 'presumida'
+estado: 'medida'
 grupo: 'base'
 ordem: 46
 fenomeno: '[[Marcas de IA]]'

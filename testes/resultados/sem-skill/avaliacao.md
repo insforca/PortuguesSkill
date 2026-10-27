@@ -1,6 +1,6 @@
 # Avaliação: sem-skill
 
-**20 textos · 4829 palavras · 31 erros (6.4 por mil palavras) · 51 avisos (10.6 por mil)**
+**20 textos · 4829 palavras · 30 erros (6.2 por mil palavras) · 51 avisos (10.6 por mil)**
 
 | id | registo | palavras | erros | avisos | erros encontrados |
 |---|---|---|---|---|---|
@@ -8,7 +8,7 @@
 | 02 | académico | 257 | 2 | 1 | «trajetórias» (grafia AO90); «retos» (grafia AO90) |
 | 03 | académico | 185 | 1 | 1 | «atração» (grafia AO90) |
 | 04 | académico | 207 | 1 | 4 | «atuava» (grafia AO90) |
-| 05 | ensaio | 321 | 3 | 3 | «há de» (hífen); «coletiva» (grafia AO90); «exato» (grafia AO90) |
+| 05 | ensaio | 321 | 2 | 3 | «coletiva» (grafia AO90); «exato» (grafia AO90) |
 | 06 | ensaio | 272 | 1 | 3 | «ativos» (grafia AO90) |
 | 07 | crónica | 346 | 1 | 9 | «coletivo» (grafia AO90) |
 | 08 | crónica | 269 | 0 | 1 |  |
@@ -39,6 +39,5 @@
 | ERRO | colocação pronominal | 2 |
 | AVISO | exclamações | 2 |
 | AVISO | tríades | 1 |
-| ERRO | hífen | 1 |
 | AVISO | maiúsculas | 1 |
 | AVISO | perguntas retóricas | 1 |

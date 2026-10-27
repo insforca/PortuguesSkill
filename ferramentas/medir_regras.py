@@ -33,7 +33,8 @@ FONTES = {"Público": [os.path.join(C, "pt_completo.txt")],
           "Folha": [os.path.join(C, "br.txt")],
           "Parlamento": [os.path.join(C, "parl_discurso.txt"), os.path.join(C, "parl_espontaneo.txt")],
           "IA": [os.path.join(REPO, "testes", "resultados", d, f)
-                 for d in ("sem-skill", "dificeis-sem-skill")
+                 for d in ("sem-skill", "dificeis-sem-skill", "base-extra")
+                 if os.path.isdir(os.path.join(REPO, "testes", "resultados", d))
                  for f in sorted(os.listdir(os.path.join(REPO, "testes", "resultados", d)))
                  if f.endswith(".md") and f != "avaliacao.md"]}
 PALAVRA = re.compile(r"[A-Za-zÀ-ÿ]+")
