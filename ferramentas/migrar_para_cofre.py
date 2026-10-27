@@ -1,4 +1,4 @@
-"""Cria o cofre Obsidian (conhecimento/) a partir dos dados actuais da skill. Corre-se uma vez.
+"""Cria o cofre Obsidian (Portuguese Skill/) a partir dos dados actuais da skill. Corre-se uma vez.
 
 Fontes: pt-pt/antesAO90/dados/{brasileirismos,vocabulario_ia,now_medicoes}.tsv, listas de
 frequência do CHAVE em .cache/corpora/freq/ e os resultados conhecidos dos testes.

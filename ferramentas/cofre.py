@@ -1,4 +1,4 @@
-"""Leitura e escrita das notas do cofre Obsidian (conhecimento/), sem dependências externas.
+"""Leitura e escrita das notas do cofre Obsidian (Portuguese Skill/), sem dependências externas.
 
 As notas têm propriedades YAML simples no topo (texto, números, listas de ligações) e corpo
 em Markdown. Este módulo lê e escreve só esse subconjunto de YAML, que é o que o Obsidian
@@ -8,7 +8,7 @@ import json
 import os
 import re
 
-RAIZ = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "conhecimento")
+RAIZ = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "Portuguese Skill")
 PASTAS = {"regra": "Regras", "medicao": "Medições", "fonte": "Fontes", "fenomeno": "Fenómenos",
           "registo": "Registos", "teste": "Testes", "indice": "00 Índices"}
 

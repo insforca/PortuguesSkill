@@ -2,7 +2,7 @@
 
 O site não permite acesso automático: este script não faz pedidos nenhuns. Imprime a expressão
 pronta a colar (com as contracções separadas, como o corpus as guarda), os passos a seguir e o
-modelo da nota de medição para o cofre (conhecimento/Medições/).
+modelo da nota de medição para o cofre (Portuguese Skill/Medições/).
 
 Uso:
   python consulta_cdp.py "tela do celular" ["ecrã do telemóvel" ...]
@@ -46,7 +46,7 @@ def main(argv):
         q = separar(expr)
         nota = re.sub(r'[\\/:*?"<>|#^\[\]]', "-", f"NOW — {expr}")
         print(f"«{expr}»  →  colar:  {q}")
-        print(f"   nota para o cofre: conhecimento/Medições/{nota}.md")
+        print(f"   nota para o cofre: Portuguese Skill/Medições/{nota}.md")
         print("   ---\n   tipo: medicao\n   fonte: '[[NOW (Corpus do Português)]]'")
         print(f"   forma: '{expr}'\n   por_milhao_pt: \n   por_milhao_br: \n   razao_br_pt: ")
         print("   metodo: 'consulta manual, vista Chart por país'\n   data: \n   ---\n")

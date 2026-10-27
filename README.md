@@ -43,6 +43,10 @@ Sem os dicionários, o verificador funciona em modo reduzido.
 - O script que gera as listas está em `ferramentas/gerar_listas.py`.
 - Os dicionários (Natura, GPL/LGPL/MPL; VERO pt_BR, LGPL/MPL) não são redistribuídos: `instalar_dicionarios.py` descarrega-os das fontes oficiais.
 
+## Cofre de conhecimento (Obsidian)
+
+A pasta `Portuguese Skill/` é um cofre Obsidian e a **fonte de verdade** das regras: cada regra é uma nota ligada às medições e às fontes que a justificam (CETEMPúblico, CHAVE, NOW, corpora orais, debates parlamentares, testes). Os ficheiros `dados/brasileirismos.tsv` e `dados/vocabulario_ia.tsv` geram-se com `python ferramentas/gerar_dados.py`, que valida as regras (regex inválidos, evidências em falta, contradições entre regra e medição). Abrir a pasta no Obsidian com o plugin Dataview para ver os painéis em `00 Índices/`.
+
 ## Testes
 
 Ver `testes/README.md`: controlos do verificador e uma bateria de 20 pedidos que se corre a cada versão, com e sem a skill, para medir o efeito de cada alteração.

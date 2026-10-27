@@ -66,7 +66,7 @@ Para textos longos (capítulos, teses, livros), fazer as passagens 3 a 7 por sec
 
 **Dúvidas sem dados** (é português de Portugal ou do Brasil? é frequente ou rara?): `python scripts/consulta_cdp.py "<expressão>"` prepara uma consulta **manual** ao Corpus do Português (corpus NOW, notícias 2012–2019, por país), com a expressão pronta a colar. O site proíbe acesso automático: a consulta é feita pelo utilizador. As medições ficam em `dados/now_medicoes.tsv`.
 
-**Origem das regras:** as listas em `dados/` são geradas a partir de um cofre Obsidian (`conhecimento/` no repositório da skill), em que cada regra está ligada às medições que a justificam (CETEMPúblico, CHAVE, NOW, corpora orais da Linguateca, debates parlamentares).
+**Origem das regras:** as listas em `dados/` são geradas a partir de um cofre Obsidian (`Portuguese Skill/` no repositório da skill), em que cada regra está ligada às medições que a justificam (CETEMPúblico, CHAVE, NOW, corpora orais da Linguateca, debates parlamentares).
 
 ## Trabalhos académicos (Portugal)
 

@@ -1,5 +1,5 @@
-# Brasileirismos lexicais — GERADO a partir do cofre conhecimento/ (ferramentas/gerar_dados.py).
-# Não editar à mão: editar as notas em conhecimento/Regras/.
+# Brasileirismos lexicais — GERADO a partir do cofre Portuguese Skill/ (ferramentas/gerar_dados.py).
+# Não editar à mão: editar as notas em Portuguese Skill/Regras/.
 # Só léxico: a grafia brasileira (ação, ônibus, econômico) é detectada pelos dicionários.
 # forma(s) separadas por |	alternativa em PT-PT	nível (erro|aviso)	nota
 equipe|equipes	equipa / equipas	erro

@@ -1,6 +1,6 @@
 # Avaliação: v1.6
 
-**20 textos · 4367 palavras · 0 erros (0.0 por mil palavras) · 13 avisos (3.0 por mil)**
+**20 textos · 4367 palavras · 0 erros (0.0 por mil palavras) · 14 avisos (3.2 por mil)**
 
 | id | registo | palavras | erros | avisos | erros encontrados |
 |---|---|---|---|---|---|
@@ -10,7 +10,7 @@
 | 04 | académico | 217 | 0 | 1 |  |
 | 05 | ensaio | 301 | 0 | 0 |  |
 | 06 | ensaio | 306 | 0 | 1 |  |
-| 07 | crónica | 330 | 0 | 3 |  |
+| 07 | crónica | 330 | 0 | 4 |  |
 | 08 | crónica | 258 | 0 | 1 |  |
 | 09 | formal | 113 | 0 | 2 |  |
 | 10 | formal | 336 | 0 | 1 |  |
@@ -30,8 +30,8 @@
 | nível | categoria | ocorrências |
 |---|---|---|
 | AVISO | comprimento das frases | 3 |
+| AVISO | brasileirismo | 3 |
 | AVISO | marca de IA | 3 |
 | AVISO | ritmo | 2 |
-| AVISO | brasileirismo | 2 |
 | AVISO | exclamações | 2 |
 | AVISO | perguntas retóricas | 1 |

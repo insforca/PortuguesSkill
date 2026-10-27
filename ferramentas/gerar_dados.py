@@ -1,6 +1,6 @@
-"""Gera os ficheiros de dados da skill a partir do cofre (conhecimento/) e valida as regras.
+"""Gera os ficheiros de dados da skill a partir do cofre (Portuguese Skill/) e valida as regras.
 
-O cofre é a fonte de verdade: cada regra é uma nota em conhecimento/Regras/ com as medições
+O cofre é a fonte de verdade: cada regra é uma nota em Portuguese Skill/Regras/ com as medições
 que a justificam. Este script escreve dados/brasileirismos.tsv e dados/vocabulario_ia.tsv
 (no formato que scripts/verificar.py lê) e a nota «00 Índices/Contradições».
 
@@ -27,11 +27,11 @@ DESTINOS = [os.path.join(REPO, "pt-pt", "antesAO90", "dados"),
             os.path.expanduser("~/.claude/skills/portugues-skill/dados")]
 LIMIAR_CONTRADICAO = 3.0
 
-CABECALHO_BR = ("# Brasileirismos lexicais — GERADO a partir do cofre conhecimento/ (ferramentas/gerar_dados.py).\n"
-                "# Não editar à mão: editar as notas em conhecimento/Regras/.\n"
+CABECALHO_BR = ("# Brasileirismos lexicais — GERADO a partir do cofre Portuguese Skill/ (ferramentas/gerar_dados.py).\n"
+                "# Não editar à mão: editar as notas em Portuguese Skill/Regras/.\n"
                 "# Só léxico: a grafia brasileira (ação, ônibus, econômico) é detectada pelos dicionários.\n"
                 "# forma(s) separadas por |\talternativa em PT-PT\tnível (erro|aviso)\tnota\n")
-CABECALHO_IA = ("# Marcas de texto gerado por IA — GERADO a partir do cofre conhecimento/ (ferramentas/gerar_dados.py).\n"
+CABECALHO_IA = ("# Marcas de texto gerado por IA — GERADO a partir do cofre Portuguese Skill/ (ferramentas/gerar_dados.py).\n"
                 "# Expressão regular (sem distinção de maiúsculas)\tlimite por texto\tsugestão\n")
 
 
