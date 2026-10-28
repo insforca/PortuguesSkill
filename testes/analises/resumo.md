@@ -70,3 +70,9 @@ Todos passaram para `dados/vocabulario_ia.tsv` e para as regras da skill (v1.6 e
 ## Linha de base extra (Outubro de 2026)
 
 42 textos novos sem a skill (14 588 palavras; `pedidos_base_extra.tsv`): 5,8 erros e 8,2 avisos por mil palavras, quase todos de grafia AO90. Com 23 mil palavras de referência IA, quatro marcas presumidas passaram a medidas: *desafios* (5× a prosa portuguesa), *ecossistemas* (16×), *não é… é* (6×) e *potencializar* (25×). Das 20 que ficam presumidas, 13 nunca aparecem nos textos do Claude (*explorar*, *mergulhar*, *tapeçaria*, *sinergias*…). Vêm de listas feitas para outros modelos. *Ou seja*, *por um lado* e *fundamental* aparecem até menos do que no Público e no Parlamento. Pormenor em `regras_medidas.md`.
+
+## Bateria extra v1.8 e teste cego (Outubro de 2026)
+
+- Os 42 pedidos extra com a v1.8: 0 erros e 1,6 avisos por mil palavras (sem a skill: 5,8 e 7,7). Nove avisos de brasileirismo eram falsos positivos (*arquivo distrital*, *baixar o preço*, *toda a gente*); os padrões passaram a exigir o contexto brasileiro. Com o padrão estreito, *a gente* pronome dá Folha ÷ Público = 7 (antes 1,3, contestada) e *legal* = fixe dá 8,3.
+- Tiques novos, criados pela própria skill: *convém* (8,6 por 10 mil palavras; sem a skill 2,0; Público 0,2), *parece-me* e *quem* como sujeito genérico. Entraram no verificador e no SKILL.md (`tiques_v1.8_extra.md`).
+- Teste cego (`ferramentas/preparar_teste_cego.py`): 10 excertos do Público (opinião e cultura, 1993–1998) e 10 textos da v1.8 emparelhados (mesmo género, assunto, época e tamanho; `pedidos_cego.tsv`). A página fica em `.cache/teste_cego/` (fora do git). Resultado da leitura humana: por fazer.

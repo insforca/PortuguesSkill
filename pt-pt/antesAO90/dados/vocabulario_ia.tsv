@@ -64,3 +64,7 @@
 \bcomo quem\b	1	comparação teatral repetida: a construção é portuguesa (3 vezes mais frequente em PT do que no BR, NOW), mas não mais de uma por texto
 \bninguém\b	2	«ninguém» como recurso de cena: variar
 \b(setenta|oitenta|noventa) e (um|dois|três|quatro|cinco|seis|sete|oito|nove)\b	1	idade ou ano por extenso como pormenor: tique de concretude
+# --- tiques da própria skill (descobrir_tiques.py, v1.8) ---
+\bconvém\b	1	«convém» repetido: tique da skill; dizer directamente («é preciso», «deve-se») ou cortar
+\bparece-me\b	1	«parece-me» repetido: assumir a opinião sem rodeios ou variar («julgo», «creio»)
+\bquem\b	3	«quem» como sujeito genérico («quem o diz…», «quem trabalha…»): variar com sujeitos concretos

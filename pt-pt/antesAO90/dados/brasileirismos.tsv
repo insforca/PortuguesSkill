@@ -75,7 +75,7 @@ liberar|liberou|liberado|liberada|liberação	libertar / desbloquear / autorizar
 reajuste|reajustes	actualização / aumento	aviso
 fato|fatos	facto / factos (acontecimento); fato é vestuário	aviso	verificar o sentido
 você|vocês	tratamento adequado (tu, o senhor, a senhora) ou forma impessoal	aviso	ver registos.md
-a gente	nós	aviso	só admissível em fala de personagem
+(?<!toda )(?<!da )a gente(?= (?:vai|vamos|foi|tem|tinha|está|estava|tá|fica|ficou|faz|fez|pode|podia|quer|queria|precisa|sabe|acha|achou|gosta|chegou|era|se|não|já|nunca|sempre|também|só|ainda|nem|teve|ia|deve|consegue|conseguiu|viu|vê|disse|diz|pensa|sente|mora|trabalha|começou|anda|volta|voltou|combina|combinou|conversa|conversou|fala|falou)\b)	nós	aviso	só admissível em fala de personagem
 pra|pro|pros|pras	para / para o / para os / para as	aviso	normal na fala portuguesa informal; na escrita cuidada e na voz do narrador, não
 tá	está	aviso	«tá bem» é fala portuguesa corrente; na escrita cuidada, «está»
 tô	tou (fala) / estou (escrita)	erro	«tô» é 56 vezes mais frequente no Brasil (NOW); em Portugal, «tou»
@@ -88,18 +88,18 @@ celular|celulares	telemóvel / telemóveis	erro	28 vezes mais frequente no Brasi
 aplicativo|aplicativos	aplicação / aplicações	erro	52 vezes mais frequente no Brasil (NOW)
 tela|telas	ecrã / ecrãs	aviso	em PT «tela» é a de pintura ou tecido; no sentido de ecrã é só brasileira («tela do celular»: BR 0,62, PT 0 por milhão; «ecrã táctil»: PT 1,54, BR 0 — NOW)
 senha|senhas	palavra-passe / código	aviso	«senha» também se usa em PT (senha de vez, código); é só 4 vezes mais brasileira (NOW): sinal fraco
-baixar|baixou|baixado|baixe	descarregar / descarregou…	aviso	só no sentido informático
+(?:baixar|baixou|baixado|baixe|baixei|baixa|baixem) (?:o |os |a |as |um |uma |uns |este |esse |esta |essa |estes |esses |o seu |a sua |o teu |a tua |seu |teu )?(?:app|apps|aplicação|aplicações|aplicativos?|ficheiros?|arquivos?|programas?|jogos?|músicas?|filmes?|vídeos?|pdf|documentos?|actualização|atualização|software)	descarregar / descarregou…	aviso	só no sentido informático
 deletar|deletou|deletado|delete	apagar / eliminar	erro
-salvar|salvou|salvo	guardar / gravou…	aviso	só no sentido informático («salvar» uma vida está certo)
+(?:salvar|salvou|salvo|salvei|salva) (?:o |os |a |as |um |uma |uns |este |esse |esta |essa |estes |esses |o seu |a sua |o teu |a tua |seu |teu )?(?:arquivos?|ficheiros?|documentos?|alterações|trabalho|projecto|projeto|imagem|fotos?|pdf|contacto|contato)	guardar / gravou…	aviso	só no sentido informático («salvar» uma vida está certo)
 mouse	rato	erro
 postar|postou|postado|postagem	publicar / publicou / publicação	erro
 site|sites	sítio / página (na Internet); «site» também se usa em PT	aviso
 printar|printou|print	captura de ecrã	aviso
-arquivo|arquivos	ficheiro / ficheiros (informático)	aviso	«arquivo» em PT é o lugar ou o conjunto de documentos
+arquivos? (?:pdf|word|excel|zip|digita(?:l|is)|em anexo|anexos?|de (?:texto|áudio|vídeo|imagem))|(?:abrir|abra|abri|anexar|anexei|anexo|anexa|guardar|salvar|salvei|baixar|baixei|enviar|envio|enviei|descarregar|carregar|partilhar|compartilhar|apagar|editar|renomear) (?:o |os |a |as |um |uma |uns |este |esse |esta |essa |estes |esses |o seu |a sua |o teu |a tua |seu |teu )?arquivos?	ficheiro / ficheiros (informático)	aviso	«arquivo» em PT é o lugar ou o conjunto de documentos
 digitar|digite|digitou|digitado|digita	escrever / introduzir / marcar	aviso	no sentido de teclar
 salve|salvem	guarde / guardem	aviso	só no sentido informático
 # --- registo oral informal (medido nos corpora orais da Linguateca: Museu da Pessoa PT/BR, C-Oral-Brasil) ---
 né	não é? / pois / não achas?	erro	marcador oral brasileiro: 2937 por milhão na fala brasileira, 0 na portuguesa
 cê|cês	tu / você / o senhor (conforme o tratamento)	erro	forma oral brasileira de «você»: 1392 por milhão na fala brasileira, 0 na portuguesa
 ué	então? / ora essa! / olha	erro	interjeição brasileira: 109 por milhão na fala brasileira, 0 na portuguesa
-legal|legais	fixe / porreiro / giro (no sentido informal)	aviso	no sentido de «fixe» é brasileiro (oral BR 313 vs PT 3 por milhão); no sentido jurídico está certo
+(?:que|muito|super|tão|bem|achei|acho|ficou|foi) legal(?![\w-]+)(?! (?:de|da|do|dos|das|e|para|em|ou)\b)|legal(?=\s*!)	fixe / porreiro / giro (no sentido informal)	aviso	no sentido de «fixe» é brasileiro (oral BR 313 vs PT 3 por milhão); no sentido jurídico está certo

@@ -92,6 +92,10 @@ def classificar(r, c, tot):
     pm = {f: c[f] / tot[f] * 1e6 for f in c}
     cat = r.get("categoria")
     if cat in ("brasileirismo", "grafia", "sintaxe"):
+        # com poucos casos a razão não diz nada (ex.: léxico informático nos jornais de 1991-1998)
+        if c["Público"] + c["Folha"] < 20:
+            return "presumida", (f"só {c['Público'] + c['Folha']} casos no Público e na Folha: "
+                                 "faltam dados (consultar o NOW no Corpus do Português)")
         razao = (pm["Folha"] + 0.5) / (pm["Público"] + 0.5)
         if razao >= 3:
             return "medida", f"Folha ÷ Público = {razao:.1f}"

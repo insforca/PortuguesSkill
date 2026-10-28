@@ -89,7 +89,7 @@ Medido no CETEMPúblico completo (168 milhões de palavras, *Público* 1991–19
 
 ## Concretude sem fórmula
 
-Um pormenor concreto por parágrafo chega, e o tipo deve variar (um número, um nome, um gesto, uma frase dita). Não repetir de texto para texto a hora exacta, o cheiro, o objecto de cozinha ou o *duas ou três*: a análise dos textos gerados mostrou que se tinham tornado tiques da própria skill (ver `references/anti-ia-pt-pt.md`). Na ficção, o mesmo vale para a comparação *como quem…*, o *ninguém* de cena, as idades e os anos por extenso (*oitenta e dois anos*, *em setenta e três*) e os nomes de personagens: variar os nomes de texto para texto e fugir aos que o modelo repete (*Inês*, *Tiago*, *Lurdes*, *Zé*).
+Um pormenor concreto por parágrafo chega, e o tipo deve variar (um número, um nome, um gesto, uma frase dita). Não repetir de texto para texto a hora exacta, o cheiro, o objecto de cozinha ou o *duas ou três*: a análise dos textos gerados mostrou que se tinham tornado tiques da própria skill (ver `references/anti-ia-pt-pt.md`). Na ficção, o mesmo vale para a comparação *como quem…*, o *ninguém* de cena, as idades e os anos por extenso (*oitenta e dois anos*, *em setenta e três*) e os nomes de personagens: variar os nomes de texto para texto e fugir aos que o modelo repete (*Inês*, *Tiago*, *Lurdes*, *Zé*). Na prosa de opinião e de ensaio, a v1.8 criou outros três: *convém* (40 vezes mais do que no *Público*), *parece-me* e *quem* como sujeito genérico (*quem o diz vive…*, *quem trabalha sabe…*). Usar cada um no máximo uma vez por texto e preferir sujeitos concretos.
 
 ## Ficção (contos, novelas, romances)
 
