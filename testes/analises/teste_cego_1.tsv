@@ -1,0 +1,21 @@
+# Teste cego 1 (2026-10-28): leitor = o autor da skill. n.º, id, origem (H humano / I IA), resposta, nota do leitor
+1	C08	I	H	
+2	C06	I	I	
+3	C02	I	H	
+4	C09	I	H	
+5	H08	H	H	
+6	H07	H	H	
+7	C10	I	H	
+8	H04	H	H	
+9	C05	I	I	em dash
+10	H01	H	H	
+11	H10	H	I	«
+12	H06	H	I	«
+13	C07	I	H	
+14	H09	H	H	
+15	C04	I	H	
+16	H03	H	H	
+17	H02	H	I	—
+18	C03	I	H	
+19	H05	H	H	
+20	C01	I	H	
