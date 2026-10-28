@@ -15,3 +15,5 @@ Formulário: https://docs.google.com/forms/d/e/1FAIpQLSd3TCLP7qkim2XHZzDoY4G309z
 Divulgação: redacção do Ciberdúvidas (sem fórum aberto; mensagem em `testes/teste_cego_publico/mensagem_ciberduvidas.md`). Meta: 30 respostas ou mais. Chave e textos fora do git até fechar.
 
 Achados da preparação: o verificador marcava *trem* e o gerúndio (*estão colando*) nos autores do século XIX, que são português europeu autêntico da época; e dava *recôncavos* como grafia brasileira (corrigido: excepção para palavras portuguesas com ê/ô antes de m/n, como *côncavo*, *cônsul*, *cônjuge*).
+
+Pedido de divulgação enviado à redacção do Ciberdúvidas pelo formulário de contacto a 2026-10-28; a aguardar resposta.
