@@ -34,6 +34,9 @@ MESES = r"janeiro|fevereiro|março|abril|maio|junho|julho|agosto|setembro|outubr
 # acento em ditongo aberto antes de 1990 (idéia, apóia), trema (freqüente).
 # Palavras raras sem estes sinais e ausentes do dicionário pré-AO90 ficam como NOTA.
 MARCA_BR = re.compile(r"[êô](?=[mn])|[éó]i(?=a|as|o|os)\b|ü")
+# Palavras portuguesas que têm mesmo ê/ô antes de m/n (e que o dicionário pode não trazer em todas as flexões)
+PT_CIRCUNFLEXO = re.compile(r"côncav|recôncav|bicôncav|cônsul|cônjug|cônego|cômput|tômbol|estômag|"
+                            r"êmbol|pêndul|fêmea|têm$|vêm$|contêm$|detêm$|mantêm$|obtêm$|provêm$|convêm$")
 ABREVIATURAS = re.compile(r"\b(Sr|Sra|Srs|Dr|Dra|Drs|Prof|Profª|Exmo|Exma|Ex|V|D|n|art|p|pp|vol|cf|etc|S)\.(ª|º|as|os)?"
                           r"(?=\s+\S)")
 ESTAR = (r"estar|estou|estás|está|estamos|estais|estão|estava|estavas|estávamos|estavam|"
@@ -141,7 +144,7 @@ class Verificador:
                 r = self._classificar(baixa)
             if r == "ao90":
                 self._add(res, texto, "ERRO", "grafia AO90", m.start(), m.end(), "forma do AO90: usar a grafia anterior")
-            elif r == "br" and MARCA_BR.search(baixa):
+            elif r == "br" and MARCA_BR.search(baixa) and not PT_CIRCUNFLEXO.search(baixa):
                 self._add(res, texto, "ERRO", "grafia brasileira", m.start(), m.end(), "forma brasileira: usar a grafia portuguesa")
             elif r in ("br", "desconhecida") and w.islower():
                 self._add(res, texto, "NOTA", "palavra desconhecida", m.start(), m.end(), "confirmar (gralha, neologismo ou estrangeirismo)")

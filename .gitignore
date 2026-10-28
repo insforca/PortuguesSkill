@@ -6,3 +6,7 @@ testes/log_*.txt
 Portuguese Skill/.obsidian/workspace*
 Portuguese Skill/.obsidian/plugins/
 Portuguese Skill/.obsidian/cache
+
+# teste cego público em curso: chave e textos só depois de fechar o estudo
+testes/resultados/cego-publico-v1.8/
+testes/teste_cego_publico/humanos.json

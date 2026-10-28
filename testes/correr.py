@@ -41,7 +41,7 @@ def localizar_verificador():
     sys.exit("verificar.py não encontrado")
 
 
-CONJUNTOS = ("pedidos.tsv", "pedidos_dificeis.tsv", "pedidos_base_extra.tsv", "pedidos_cego.tsv")
+CONJUNTOS = ("pedidos.tsv", "pedidos_dificeis.tsv", "pedidos_base_extra.tsv", "pedidos_cego.tsv", "pedidos_cego_publico.tsv")
 
 
 def ler_pedidos(conjunto="pedidos.tsv"):
