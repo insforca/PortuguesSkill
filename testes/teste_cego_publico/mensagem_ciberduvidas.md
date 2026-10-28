@@ -16,7 +16,7 @@ Para saber se o resultado se distingue da escrita humana, preparei um teste de l
 
 Os leitores do Ciberdúvidas seriam os participantes ideais. Gostaria de saber se a redacção aceitaria divulgá-lo, no «Correio», nas redes sociais do Ciberdúvidas ou da forma que considerar adequada. Terei todo o gosto em partilhar os resultados com a redacção quando o estudo terminar.
 
-Endereço do teste: [colar aqui o endereço do Google Forms]
+Endereço do teste: https://docs.google.com/forms/d/e/1FAIpQLSd3TCLP7qkim2XHZzDoY4G309z4Nna_r7gXWkq-ndrAakAlsw/viewform
 Código e metodologia: https://github.com/insforca/PortuguesSkill
 
 Com os melhores cumprimentos,
@@ -26,4 +26,4 @@ Com os melhores cumprimentos,
 
 ## Texto curto para o convite (sem revelar a hipótese)
 
-> **Humano ou máquina?** Vinte excertos de prosa portuguesa à moda de 1870–1920: metade de autores portugueses da época, metade gerada por inteligência artificial. Consegue distingui-los? Teste anónimo, cerca de 15 minutos, em português europeu (ortografia anterior ao Acordo de 1990). [endereço]
+> **Humano ou máquina?** Vinte excertos de prosa portuguesa à moda de 1870–1920: metade de autores portugueses da época, metade gerada por inteligência artificial. Consegue distingui-los? Teste anónimo, cerca de 15 minutos, em português europeu (ortografia anterior ao Acordo de 1990). https://docs.google.com/forms/d/e/1FAIpQLSd3TCLP7qkim2XHZzDoY4G309z4Nna_r7gXWkq-ndrAakAlsw/viewform
